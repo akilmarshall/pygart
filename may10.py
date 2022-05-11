@@ -1,12 +1,11 @@
-from stroke import *
-from color import *
-from canvas import Canvas
-from path import line
-from util import info
-
-from PIL import ImageDraw
 from itertools import permutations
 from random import choice
+
+from PIL import ImageDraw
+
+from canvas import Canvas
+from color import CosinePalette, solarized
+from util import info
 
 
 class Brick:
@@ -31,7 +30,7 @@ def BrickWall(canvas, x, y, n, m, brick, pallet):
 width, height, path = info()
 
 canvas = Canvas(width, height)
-a, b, c, d = choice(list(permutations([red, base00, base01, base02])))
+a, b, c, d = choice(list(permutations([solarized['red'], solarized['base00'], solarized['base01'], solarized['base02']])))
 p = CosinePalette(a, b, c, d)
 brick = Brick(20, 10)
 cols = 19

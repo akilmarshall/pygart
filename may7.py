@@ -1,10 +1,12 @@
-from stroke import *
-from canvas import Canvas
-from random import random, choice
+from math import pi
+from random import choice, random
+
 import numpy as np
 from numpy import linspace
-from color import *
-from math import pi
+
+from canvas import Canvas
+from color import solarized
+from stroke import S
 from util import info
 
 
@@ -20,7 +22,7 @@ class CosinePalette:
         return int(r), int(g), int(b)
 
 def image(width, height, fname='out.png'):
-    palette = CosinePalette(red, green, blue, cyan)
+    palette = CosinePalette(solarized['red'], solarized['green'], solarized['blue'], solarized['cyan'])
     x = 3 * width / 8
     y = 3 * height / 8
 

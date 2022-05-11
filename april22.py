@@ -1,14 +1,16 @@
-from color import *
-from scipy.stats import beta
 from functools import partial
-from canvas import Canvas
 from random import randint
+
 from PIL import ImageDraw
 import numpy as np
+from scipy.stats import beta
+
+from canvas import Canvas
+from color import RGBA, solarized
 from util import info
 
 
-C = [red, base03]
+C = [solarized['red'], solarized['base03']]
 
 class Characteristic:
     def __init__(self, f):
@@ -30,7 +32,7 @@ class Stroke:
         self.c = c
         self.r = r
 
-    def __call__(self, canvas, color=RGBA(base03)):
+    def __call__(self, canvas, color=RGBA(solarized['base03'])):
         draw = ImageDraw.Draw(canvas.img)
         n = len(self.path)
         for i, (x, y) in enumerate(self.path):
