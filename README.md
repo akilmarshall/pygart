@@ -1,7 +1,5 @@
 # Pygart
 
-Some generative ideas realized with python.
-
 An art project just for fun.
 
 ## May 10
