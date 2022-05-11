@@ -1,4 +1,5 @@
-img
+.vim/
+img/
 *.png
 # Python
 # Byte-compiled / optimized / DLL files
