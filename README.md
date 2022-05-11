@@ -8,40 +8,40 @@ An art project just for fun.
 
 Brick walls colored with cosine color palettes.
 
-![0](https://imgur.com/iMHTa3P)
+![0](https://imgur.com/iMHTa3P.png)
 
-![1](https://imgur.com/yt5fJsP)
+![1](https://imgur.com/yt5fJsP.png)
 
-![2](https://imgur.com/bZBkyQ7)
+![2](https://imgur.com/bZBkyQ7.png)
 
-![3](https://imgur.com/8XDxMKi)
+![3](https://imgur.com/8XDxMKi.png)
 
-![4](https://imgur.com/pS0ztZ2)
+![4](https://imgur.com/pS0ztZ2.png)
 
 ## May 7
 
-[Cosine color palettes(https://iquilezles.org/articles/palettes/)
+Starting with [cosine color palettes](https://iquilezles.org/articles/palettes/)
 
-![0](https://imgur.com/aEeAZ6B)
+![0](https://imgur.com/aEeAZ6B.png)
 
-![1](https://imgur.com/fWXTxUp)
+![1](https://imgur.com/fWXTxUp.png)
 
-![2](https://imgur.com/bS9nYJU)
+![2](https://imgur.com/bS9nYJU.png)
 
-![3](https://imgur.com/Ypnh9ml)
+![3](https://imgur.com/Ypnh9ml.png)
 
-![4](https://imgur.com/hUfa6pD)
+![4](https://imgur.com/hUfa6pD.png)
 
 ## April 22
 
 Experiments with parametric lines. Prototypes the stroke module
 
-![0](https://imgur.com/r0IglTt)
+![0](https://imgur.com/r0IglTt.png)
 
-![1](https://imgur.com/amIqkM0)
+![1](https://imgur.com/amIqkM0.png)
 
-![2](https://imgur.com/ky38SOJ)
+![2](https://imgur.com/ky38SOJ.png)
 
-![3](https://imgur.com/uP2KgNr)
+![3](https://imgur.com/uP2KgNr.png)
 
-![4](https://imgur.com/tyG1Zg5)
+![4](https://imgur.com/tyG1Zg5.png)
