@@ -1,7 +1,9 @@
-'''
-Solarized color scheme colors
-'''
+import numpy as np
+from random import choice, random
+from math import pi
 
+
+# Solarized color scheme colors
 base03 = (0, 43, 54)
 base02 = (7, 54, 66)
 base01 = (88, 110, 117)
@@ -31,3 +33,27 @@ def RGBA(color: tuple[int, int, int], a=1):
 base_dark = [base03, base02, base01, base00]
 base_light = [base3, base2, base1, base0]
 colors = [orange, red, magenta, violet, blue, cyan, green]
+
+class PaletteRNG:
+    '''
+    A simple uniformly random color pallet over some intial set of colors
+    '''
+    def __init__(self, colors):
+        self.colors = colors
+
+    def __call__(self):
+        return choice(self.colors)
+
+
+class CosinePalette:
+    def __init__(self, a, b, c, d):
+        self.a = np.array(a) / 255
+        self.b = np.array(b) / 255
+        self.c = np.array(c) / 255
+        self.d = np.array(d) / 255
+
+    def __call__(self, t=None):
+        if t is None:
+            t = random()
+        r, g, b = (self.a + self.b * np.cos(2 * pi * ((t * self.c) + self.d))) * 255
+        return int(r), int(g), int(b)

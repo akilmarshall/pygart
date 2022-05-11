@@ -1,11 +1,11 @@
 from stroke import *
 from canvas import Canvas
-from path import line
 from random import random, choice
 import numpy as np
 from numpy import linspace
 from color import *
-from math import cos, pi
+from math import pi
+from util import info
 
 
 class CosinePalette:
@@ -36,7 +36,5 @@ def image(width, height, fname='out.png'):
     canvas.save(fname=fname)
 
 
-# image(1600, 900, '/home/akil/.wall.png')
-# image(700, 700)
-for i in range(10):
-    image(1600, 900, f'out/{i}.png')
+width, height, path = info()
+image(width, height, path)

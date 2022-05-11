@@ -2,9 +2,10 @@ from color import *
 from scipy.stats import beta
 from functools import partial
 from canvas import Canvas
-from random import choice, random, randint
+from random import randint
 from PIL import ImageDraw
 import numpy as np
+from util import info
 
 
 C = [red, base03]
@@ -54,4 +55,7 @@ def background(width, height, step, r, fname):
     canvas.save(fname)
 
 
-background(1600, 900, 20, 5, '/home/akil/.wall.png')
+width, height, path = info()
+width = int(width)
+height = int(height)
+background(width, height, 20, 5, path)
