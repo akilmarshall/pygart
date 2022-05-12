@@ -2,6 +2,20 @@
 
 An art project just for fun.
 
+## May 12
+
+[The Algorithmic Beauty of Plants](http://algorithmicbotany.org/papers/abop/abop.pdf)
+
+![0](https://imgur.com/KWY6ZvK.png)
+
+![1](https://imgur.com/c61mb8b.png)
+
+![2](https://imgur.com/HmVoX4L.png)
+
+![3](https://imgur.com/aQQ8rz8.png)
+
+![4](https://imgur.com/f80pfrS.png)
+
 ## May 10
 
 Brick walls colored with cosine color palettes.
