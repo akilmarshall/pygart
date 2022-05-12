@@ -3,6 +3,7 @@ Named colors, color palettes, and other color functions
 '''
 from math import pi
 from random import choice, random
+from itertools import permutations
 
 import numpy as np
 
@@ -59,3 +60,24 @@ class CosinePalette:
             t = random()
         r, g, b = (self.a + self.b * np.cos(2 * pi * ((t * self.c) + self.d))) * 255
         return int(r), int(g), int(b)
+
+class Palette:
+    '''
+    Given colors create a random cosine color palettes
+    Palette() emits colors
+    '''
+    def __init__(self, colors:list):
+        '''
+        colors  a list of rgb colors, 4 or more.
+        '''
+        assert len(colors) > 3
+        self.colors = colors
+
+        self._setup_palette()
+
+    def _setup_palette(self):
+        self.a, self.b, self.c, self.d = choice(list(permutations(self.colors, r=4)))
+        self.palette = CosinePalette(self.a, self.b, self.c, self.d)
+
+    def __call__(self, t=None):
+        return self.palette(t)
