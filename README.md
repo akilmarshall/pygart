@@ -16,6 +16,16 @@ An art project just for fun.
 
 ![4](https://imgur.com/f80pfrS.png)
 
+![5](https://imgur.com/NEh8IC8.png)
+
+![6](https://imgur.com/3gd5x1S.png)
+
+![7](https://imgur.com/oRsHGcM.png)
+
+![8](https://imgur.com/UxcVDhy.png)
+
+![9](https://imgur.com/z7bDWGr.png)
+
 ## May 10
 
 Brick walls colored with cosine color palettes.
