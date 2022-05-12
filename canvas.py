@@ -1,5 +1,6 @@
-from color import *
 from PIL import Image
+
+from color import RGBA, solarized
 
 
 class Canvas:
@@ -10,7 +11,7 @@ class Canvas:
     def __init__(self, width: int, height: int, color: tuple[int, int, int] | None = None):
         self.width = width
         self.height = height
-        self.color = RGBA(base3) if color is None else color
+        self.color = RGBA(solarized['base3']) if color is None else color
 
         self._setup()
 

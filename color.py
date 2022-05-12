@@ -1,9 +1,10 @@
 '''
 Named colors, color palettes, and other color functions
 '''
-import numpy as np
-from random import choice, random
 from math import pi
+from random import choice, random
+
+import numpy as np
 
 
 # named solarized colors
@@ -48,10 +49,10 @@ class PaletteRNG:
 
 class CosinePalette:
     def __init__(self, a, b, c, d):
-        self.a = np.array(a) / 255
-        self.b = np.array(b) / 255
-        self.c = np.array(c) / 255
-        self.d = np.array(d) / 255
+        self.a = np.array(a) / 255  # type: ignore
+        self.b = np.array(b) / 255  # type: ignore
+        self.c = np.array(c) / 255  # type: ignore
+        self.d = np.array(d) / 255  # type: ignore
 
     def __call__(self, t=None):
         if t is None:
