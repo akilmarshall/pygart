@@ -4,7 +4,7 @@ An art project just for fun.
 
 ## July 11
 
-I stumbled across a particularlly wonderful color pallet and gave a little more thought brick wall patterns (more on this later).
+I stumbled across a particularly wonderful color pallet and gave a little more thought brick wall patterns (more on this in the future).
 
 ```
 cosine(base2, red, green, base01)
