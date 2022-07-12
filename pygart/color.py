@@ -1,6 +1,8 @@
-'''
-Named colors, color palettes, and other color functions
-'''
+"""
+File: color.py
+Description: Named colors, color palettes, and other color functions
+"""
+
 from math import pi
 from random import choice, random
 from itertools import permutations

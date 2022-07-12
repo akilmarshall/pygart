@@ -1,3 +1,8 @@
+"""
+File: lsystem.py
+Description: Turtle interpreters and L-System (grammar) generators.
+"""
+
 from math import cos, sin
 from PIL import ImageDraw
 from .color import solarized

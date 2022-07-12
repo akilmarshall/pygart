@@ -1,3 +1,9 @@
+"""
+File: canvas.py
+Description: A module providing a wrapper for PIL.Image to
+             allow/facilitate image rendering
+"""
+
 from PIL import Image
 
 from color import RGBA, solarized

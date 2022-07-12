@@ -1,3 +1,8 @@
+"""
+File: stroke.py
+Description: Drawing parametric strokes
+"""
+
 from functools import partial
 
 from PIL import ImageDraw
