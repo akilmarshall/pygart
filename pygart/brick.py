@@ -17,9 +17,20 @@ class Brick():
     def _pos(self, x: int, y: int):
         return (x, y, x + self.width, y + self.height)
 
-    def __call__(self, canvas, x: int, y: int, color=None):
-        if color: 
-            ImageDraw.Draw(canvas.img).rectangle(self._pos(x, y), fill=color)
+    def __call__(self, canvas, x: int, y: int, color=None, out=None, width=2):
+        if color:
+            if out:
+                ImageDraw.Draw(canvas.img).rectangle(
+                        self._pos(x, y),
+                        fill=color,
+                        outline=out,
+                        width=width
+                        )
+            else:
+                ImageDraw.Draw(canvas.img).rectangle(
+                        self._pos(x, y),
+                        fill=color
+                        )
         else:
             ImageDraw.Draw(canvas.img).line(
                     [(x, y + self.height), (x + self.width, y + self.height)],
