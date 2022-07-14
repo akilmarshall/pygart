@@ -1,6 +1,6 @@
-from util import info
-from color import CosinePalette, solarized
-from canvas import Canvas
+from pygart.util import info
+from pygart.color import CosinePalette, solarized
+from pygart.canvas import Canvas
 from random import randint
 from PIL import ImageDraw
 
