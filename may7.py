@@ -5,10 +5,10 @@ from itertools import combinations
 import numpy as np
 from numpy import linspace
 
-from canvas import Canvas
-from color import solarized
-from stroke import Stroke
-from util import info
+from pygart.canvas import Canvas
+from pygart.color import solarized
+from pygart.stroke import Stroke
+from pygart.util import info
 
 
 class CosinePalette:
@@ -18,9 +18,10 @@ class CosinePalette:
         self.c = np.array(c) / 255  # type: ignore
         self.d = np.array(d) / 255  # type: ignore
 
-    def __call__(self, t:float):
+    def __call__(self, t: float):
         r, g, b = (self.a + self.b * np.cos(2 * pi * ((t * self.c) + self.d))) * 255
         return int(r), int(g), int(b)
+
 
 def image(width, height, fname='out.png'):
     palette = CosinePalette(solarized['red'], solarized['green'], solarized['blue'], solarized['cyan'])
