@@ -2,6 +2,24 @@
 
 An art project just for fun.
 
+## July 13
+
+<p align="center">
+<img src=https://imgur.com/UYUGDP5.png />
+</p>
+<p align = "center">cosine(base1, magenta, blue, base03)</p>
+
+<p align="center">
+<img src=https://imgur.com/myZfEMd.png />
+</p>
+<p align = "center">cosine(base01, red, green, base03)</p>
+
+<p align="center">
+<img src=https://imgur.com/LIp1NbS.png />
+</p>
+<p align = "center">cosine(base2, blue, green, base03)</p>
+
+
 ## July 11
 
 I stumbled across a particularly wonderful color pallet and gave a little more thought brick wall patterns (more on this in the future).
