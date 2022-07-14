@@ -6,7 +6,7 @@ Description: A module providing a wrapper for PIL.Image to
 
 from PIL import Image
 
-from color import RGBA, solarized
+from .color import RGBA, solarized
 
 
 class Canvas:
