@@ -87,3 +87,72 @@ class CosinePaletteRNG:
 
     def __call__(self, t=None):
         return self.palette(t)
+
+
+def to_hsv(r: int, g: int, b: int) -> tuple[int, float, float]:
+    """
+    Convert 8bit rgb channels into (hue, saturation, value)
+    """
+    assert(0 <= r < 256)
+    assert(0 <= g < 256)
+    assert(0 <= b < 256)
+
+    def max_channel():
+        if r > g and r > b:
+            return 'r'
+        elif g > r and g > b:
+            return 'g'
+        elif b > r and b > g:
+            return 'b'
+    r = r/255
+    g = g/255
+    b = b/255
+    Cmax = max(r, g, b)
+    delta = Cmax - min(r, g, b)
+
+    def hue():
+        match max_channel():
+            case 'r':
+                return 60 * (((g - b) / delta) % 6)
+            case 'g':
+                return 60 * (((b - r) / delta) + 2)
+            case 'b':
+                return 60 * (((r - g) / delta) + 4)
+
+        return 0
+
+    def saturation():
+        if Cmax == 0:
+            return 0
+        return delta / Cmax
+
+    return hue(), saturation(), Cmax
+
+
+def to_rgb(h: int, s: float, v: float) -> tuple[int, int, int]:
+    """
+    Convert a (hue, saturation, value) color into (r, g, b)
+    """
+    assert(0 <= h < 360)
+    assert(0 <= s <= 1)
+    assert(0 <= v <= 1)
+    c = v * s
+    x = c * (1 - abs(((h / 60) % 2) - 1))
+    m = v - c
+
+    def RGB():
+        if 0 <= h < 60:
+            return c, x, 0
+        elif 60 <= h < 120:
+            return x, c, 0
+        elif 120 <= h < 180:
+            return 0, c, x
+        elif 180 <= h < 240:
+            return 0, x, c
+        elif 240 <= h < 300:
+            return x, 0, c
+        elif 300 <= h < 360:
+            return c, 0, x
+
+    r, g, b = RGB()
+    return int((r + m) * 255), int((g + m) * 255), int((b + m) * 255)
