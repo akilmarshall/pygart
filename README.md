@@ -19,6 +19,13 @@ An art project just for fun.
 </p>
 <p align = "center">cosine(base2, blue, green, base03)</p>
 
+Bonus regular variation.
+<p align="center">
+<img src=https://imgur.com/RUdxOY7.png />
+</p>
+<p align = "center">cosine(base2, red, green, base01)</p>
+
+
 
 ## July 11
 
