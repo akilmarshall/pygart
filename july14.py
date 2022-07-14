@@ -1,11 +1,12 @@
 from pygart.util import info
 from pygart.canvas import Canvas
-from pygart.color import solarized, CosinePalette
+from pygart.color import solarized, CosinePalette, PaletteRNG
 
 from PIL import ImageDraw
 
 
 GRAY = solarized['base00']
+GRAY = None
 
 
 def poly(polygon, color, out, weight, canvas):
@@ -90,17 +91,17 @@ class Right:
         poly(half_diamond_right(x, y, side), self._C, out, 2, canvas)
 
 
-def row(x, y, side, n, pallet, canvas):
-    Box(side, pallet(), pallet(), pallet())(x, y, canvas)
+def row(x, y, side, n, A, B, C, canvas):
+    Box(side, A(), B(), C())(x, y, canvas)
     half = side // 2
     for i in range(0, n):
-        Box(side, pallet(), pallet(), pallet())(x + i * side, y, canvas)
-        Box(side, pallet(), pallet(), pallet())(x + half + i * side, y + side, canvas)
+        Box(side, A(), B(), C())(x + i * side, y, canvas)
+        Box(side, A(), B(), C())(x + half + i * side, y + side, canvas)
 
 
-def wall(x, y, cols, rows, pallet, canvas):
+def wall(x, y, cols, rows, A, B, C, canvas):
     for i in range(rows):
-        row(x, y + i * 2 * side, side, cols, pallet, canvas)
+        row(x, y + i * 2 * side, side, cols, A, B, C, canvas)
 
 
 pallet = CosinePalette(
@@ -109,12 +110,13 @@ pallet = CosinePalette(
         solarized['green'],
         solarized['base01'],
         )
+brick_pallet = PaletteRNG([(150, 41, 56), (170, 47, 64), (190, 52, 71), (203, 65, 84), (208, 85, 102), (214, 105, 120), (219, 125, 138)]) 
+offwhite = PaletteRNG([(217, 217, 217), (230, 230, 230), (242, 242, 242)])
 
 width, height, path = info()
 x, y = width // 2, height // 2
 canvas = Canvas(width, height)
 side = 50
 
-
-wall(0, side, 11, 7, pallet, canvas)
+wall(0, side, 11, 7, pallet, pallet, pallet, canvas)
 canvas.save(path)
