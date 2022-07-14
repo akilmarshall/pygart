@@ -2,6 +2,16 @@
 
 An art project just for fun.
 
+## July 14
+
+<p align="center">
+<img src=https://imgur.com/moZyPCq.png />
+<img src=https://imgur.com/rzwk3iK.png />
+<img src=https://imgur.com/0IAw2da.png />
+</p>
+<p align = "center">cosine(base2, red, green, base01)</p>
+
+
 ## July 13
 
 <p align="center">
