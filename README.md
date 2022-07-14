@@ -6,12 +6,10 @@ An art project just for fun.
 
 <p align="center">
 <img src=https://imgur.com/moZyPCq.png />
-<img src=https://imgur.com/rzwk3iK.png />
-<img src=https://imgur.com/0IAw2da.png />
-<img src=https://imgur.com/PGN0lsQ.png />
+<img src=https://imgur.com/9NeR28A.png />
+<img src=https://imgur.com/cfOolZW.png />
+<img src=https://imgur.com/QxNkrty.png />
 </p>
-<p align = "center">cosine(base2, red, green, base01)</p>
-
 
 ## July 13
 
