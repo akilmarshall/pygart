@@ -9,6 +9,8 @@ An art project just for fun.
 <img src=https://imgur.com/9NeR28A.png />
 <img src=https://imgur.com/cfOolZW.png />
 <img src=https://imgur.com/QxNkrty.png />
+<img src=https://imgur.com/WXPSgKV.png />
+<img src=https://imgur.com/WXPSgKV.png />
 </p>
 
 ## July 13
