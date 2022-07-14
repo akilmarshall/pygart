@@ -5,9 +5,9 @@ from PIL import ImageDraw
 import numpy as np
 from scipy.stats import beta
 
-from canvas import Canvas
-from color import RGBA, solarized
-from util import info
+from pygart.canvas import Canvas
+from pygart.color import RGBA, solarized
+from pygart.util import info
 
 
 C = [solarized['red'], solarized['base03']]
