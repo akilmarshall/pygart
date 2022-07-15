@@ -11,6 +11,8 @@ An art project just for fun.
 <img src=https://imgur.com/QxNkrty.png />
 <img src=https://imgur.com/WXPSgKV.png />
 <img src=https://imgur.com/WXPSgKV.png />
+<img src=https://imgur.com/FsoxMYN.png />
+<img src=https://imgur.com/nLwNSbS.png />
 </p>
 
 ## July 13
