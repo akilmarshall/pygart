@@ -5,18 +5,32 @@ An art project just for fun.
 ## July 14
 
 <p align="center">
-<img src=https://imgur.com/moZyPCq.png />
-<img src=https://imgur.com/9NeR28A.png />
 <img src=https://imgur.com/cfOolZW.png />
 <img src=https://imgur.com/QxNkrty.png />
+</p>
+
+<p align="center">
+<img src=https://imgur.com/9NeR28A.png />
+<img src=https://imgur.com/moZyPCq.png />
 <img src=https://imgur.com/WXPSgKV.png />
 <img src=https://imgur.com/FsoxMYN.png />
+</p>
+<p align = "center">cosine(base01, red, green, base03)</p>
+<p align="center">
 <img src=https://imgur.com/nLwNSbS.png />
+</p>
+<p align = "center">p2</p>
+<p align="center">
 <img src=https://imgur.com/TDeN6mM.png />
+</p>
+<p align = "center">p3</p>
+<p align="center">
 <img src=https://imgur.com/ygRxUwR.png />
 <img src=https://imgur.com/LG6053F.png />
 <img src=https://imgur.com/r6yb6vC.png />
 </p>
+<p align = "center">p4</p>
+
 
 ## July 13
 
