@@ -15,7 +15,7 @@ An art project just for fun.
 <img src=https://imgur.com/WXPSgKV.png />
 <img src=https://imgur.com/FsoxMYN.png />
 </p>
-<p align = "center">cosine(base01, red, green, base03)</p>
+<p align = "center">cosine(base2, red, green, base01)</p>
 <p align="center">
 <img src=https://imgur.com/nLwNSbS.png />
 </p>
