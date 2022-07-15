@@ -6,6 +6,7 @@ Description: Named colors, color palettes, and other color functions
 from math import pi
 from random import choice, random
 from itertools import permutations
+import json
 
 import numpy as np
 
@@ -29,6 +30,28 @@ solarized = {
     'cyan':  (42, 161, 152),
     'green':  (133, 153, 0),
 }
+
+
+def taisho_color(color):
+    if color in color_dict:
+        r, g, b = color_dict[color]
+        return r, g, b
+
+
+def T(a):
+    return list(map(taisho_color, a))
+
+
+# taisho-showa-color-vocab.json
+color_dict = json.load(open('pygart/taisho-showa-color-vocab.json'))
+getsu_palette = [
+        [],
+        ['seashell pink', 'white', 'sulphur yellow', 'glaucose green', 'grayish lavender'],
+        ]
+
+getsu_palette = list(map(T, getsu_palette))
+
+
 
 
 def RGBA(color: tuple[int, int, int], a: float = 1.) -> tuple[int, int, int, int]:
