@@ -30,6 +30,12 @@ An art project just for fun.
 <img src=https://imgur.com/r6yb6vC.png />
 </p>
 <p align = "center">p4</p>
+<p align="center">
+<img src=https://imgur.com/qjkPrg0.png />
+<img src=https://imgur.com/1lrnzxo.png />
+<img src=https://imgur.com/KnWVAf2.png />
+</p>
+<p align = "center">Getsu 001</p>
 
 
 ## July 13
