@@ -43,15 +43,23 @@ def T(a):
 
 
 # taisho-showa-color-vocab.json
-color_dict = json.load(open('pygart/taisho-showa-color-vocab.json'))
-getsu_palette = [
-        [],
-        ['seashell pink', 'white', 'sulphur yellow', 'glaucose green', 'grayish lavender'],
-        ]
+color_dict = None
+palette_dict = None
+with open('pygart/taisho-showa-color-vocab.json') as f:
+    color_dict = json.load(f)
+with open('pygart/taisho-showa-palettes.json') as f:
+    palette_dict = json.load(f)
 
-getsu_palette = list(map(T, getsu_palette))
+
+def getsu(i):
+    p = palette_dict['pallete'][i]
+    return T(p)
 
 
+def getsu_set(month):
+    if month in palette_dict:
+        for i in palette_dict[month]:
+            yield getsu(i)
 
 
 def RGBA(color: tuple[int, int, int], a: float = 1.) -> tuple[int, int, int, int]:
@@ -64,7 +72,7 @@ def RGBA(color: tuple[int, int, int], a: float = 1.) -> tuple[int, int, int, int
 
 class PaletteRNG:
     '''
-    A simple uniformly random color pallet over some intial set of colors
+    A simple uniformly random color pallete over some intial set of colors
     '''
 
     def __init__(self, colors):
