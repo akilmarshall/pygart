@@ -1,6 +1,7 @@
 """
 File: brick.py
-Description: A module to assist in the drawing of "bricks" and things to do with bricks
+Description: A module to assist in the drawing of "bricks" and things to do with
+bricks
 """
 
 from PIL import ImageDraw
