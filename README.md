@@ -2,6 +2,19 @@
 
 An art project just for fun.
 
+## July 15
+
+City feelings with July's color palletes.
+
+<p align="center">
+<img src=https://imgur.com/9onugMW.png />
+<img src=https://imgur.com/krQ4F84.png />
+<img src=https://imgur.com/Qq3I1c8.png />
+<img src=https://imgur.com/tSiil8P.png />
+<img src=https://imgur.com/N6q6rJg.png />
+<img src=https://imgur.com/sbrGCfi.png />
+</p>
+
 ## July 14
 
 <p align="center">
