@@ -2,6 +2,19 @@
 
 An art project just for fun.
 
+## July 19
+
+[inspiration](https://www.reddit.com/r/UrbanHell/comments/w1ursx/halle_saale_neustadt_east_germany/)
+
+<p align="center">
+<img src=https://imgur.com/lJhwyuC.png />
+<img src=https://imgur.com/99edqPn.png />
+<img src=https://imgur.com/HB1WopT.png />
+<img src=https://imgur.com/L3wkdow.png />
+<img src=https://imgur.com/wM8Ysky.png />
+<img src=https://imgur.com/hQdDvkz.png />
+</p>
+
 ## July 15
 
 City feelings with July's color palletes.
