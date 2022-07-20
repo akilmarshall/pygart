@@ -91,7 +91,7 @@ Bonus regular variation.
 
 ## July 11
 
-I stumbled across a particularly wonderful color pallet and gave a little more thought brick wall patterns (more on this in the future).
+I stumbled across a particularly wonderful color pallet and gave a little more thought to the brick wall patterns (more on this in the future).
 
 ```
 cosine(base2, red, green, base01)
