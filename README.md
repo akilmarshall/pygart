@@ -2,6 +2,31 @@
 
 An art project just for fun.
 
+## July 21
+
+Experiments in unity and scale extending the work from July 14.
+
+<p align="center">
+<img src=https://imgur.com/u0IjZPs.png />
+<img src=https://imgur.com/hnivCHV.png />
+<img src=https://imgur.com/TOssNUJ.png />
+<img src=https://imgur.com/N80otZ4.png />
+</p>
+
+<p align="center">
+<img src=https://imgur.com/lICUN4z.png />
+<img src=https://imgur.com/XzLD4fJ.png />
+<img src=https://imgur.com/PnOcBSP.png />
+<img src=https://imgur.com/oaeWrhu.png />
+</p>
+
+<p align="center">
+<img src=https://imgur.com/ruF6tGH.png />
+<img src=https://imgur.com/COHNivI.png />
+<img src=https://imgur.com/H0mI6xn.png />
+<img src=https://imgur.com/EJKcGBe.png />
+</p>
+
 ## July 19
 
 [inspiration](https://www.reddit.com/r/UrbanHell/comments/w1ursx/halle_saale_neustadt_east_germany/)
@@ -91,7 +116,7 @@ Bonus regular variation.
 
 ## July 11
 
-I stumbled across a particularly wonderful color pallet and gave a little more thought brick wall patterns (more on this in the future).
+I stumbled across a particularly wonderful color pallet and gave a little more thought to the brick wall patterns (more on this in the future).
 
 ```
 cosine(base2, red, green, base01)
