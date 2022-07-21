@@ -11,14 +11,22 @@ from .color import RGBA, solarized
 
 __all__ = ['Canvas']
 
+
 class Canvas:
     '''
     Wrapper class for PIL.Image
     '''
 
-    def __init__(self, width: int, height: int, color: tuple[int, int, int] | None = None):
+    def __init__(
+            self,
+            width: int,
+            height: int,
+            path: str = 'out.png',
+            color: tuple[int, int, int] | None = None
+            ):
         self.width = width
         self.height = height
+        self.path = path
         self.color = RGBA(solarized['base3']) if color is None else color
 
         self._setup()
@@ -27,5 +35,8 @@ class Canvas:
         self.img = Image.new(
             'RGBA', (self.width, self.height), color=self.color)
 
-    def save(self, fname: str = 'out.png'):
-        self.img.save(fname)
+    def save(self, fname=None):
+        if fname:
+            self.img.save(fname)
+        else:
+            self.img.save(self.path)
