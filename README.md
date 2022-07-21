@@ -6,7 +6,7 @@ An art project just for fun.
 
 ### 21
 
-Experiments in unity and scale extending the work from July 14.
+Experiments in unity and scale extending the work from [July 14](https://github.com/akilmarshall/pygart#14).
 
 <p align="center">
 <img src=https://imgur.com/u0IjZPs.png />
