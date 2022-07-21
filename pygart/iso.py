@@ -5,7 +5,7 @@ from .canvas import Canvas
 from PIL import ImageDraw
 
 
-__all__  = [
+__all__ = [
         'ComplexBox',
         'Left',
         'Right',
