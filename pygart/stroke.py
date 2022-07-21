@@ -11,6 +11,8 @@ from scipy.stats import beta
 from .color import RGBA, solarized
 
 
+__all__ = ['Stroke']
+
 # change the argument order for use with partial
 def _beta_helper(a, b, x): return beta.pdf(x, a, b)
 def alphabeta(a, b): return partial(_beta_helper, a, b)

@@ -9,6 +9,8 @@ from PIL import Image
 from .color import RGBA, solarized
 
 
+__all__ = ['Canvas']
+
 class Canvas:
     '''
     Wrapper class for PIL.Image

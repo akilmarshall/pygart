@@ -5,6 +5,13 @@ from .canvas import Canvas
 from PIL import ImageDraw
 
 
+__all__  = [
+        'ComplexBox',
+        'Left',
+        'Right',
+        ]
+
+
 def draw(polygon, color, out, weight, canvas):
     """
     draw a polygon
@@ -19,6 +26,7 @@ def draw(polygon, color, out, weight, canvas):
 
 def diamond(x, y, side, n=1, m=1):
     """
+    Return the xy positions of points describing a diamond at (x, y).
       a
     d   b
       c
@@ -27,31 +35,34 @@ def diamond(x, y, side, n=1, m=1):
     a = (x + n * half, y - m * half)
     b = (x, y - m * side)
     c = (x - n * half, y - m * half)
-    # return [(x, y), (x + half, y - half), (x, y - side), (x - half, y - half)]
     return [(x, y), a, b, c]
 
 
 def parallelogram_right(x, y, side, n=1, m=1):
+    """
+    Return the xy position of a right handed parallelogram
+    """
     half = side // 2
     a = (x, y - m * half)
     b = (x + n * half, y - m * half)
     c = (x + n * half, y - m * half)
-    # return [(x, y), (x, y - half), (x + half, y - side), (x + half, y - half)]
     return [(x, y), a, b, c]
 
 
 def parallelogram_left(x, y, side, n=1, m=1):
+    """
+    Return the xy position of a left handed parallelogram
+    """
     half = side // 2
     a = (x, y - m * half)
     b = (x - n * half, y - m * side)
     c = (x - n * half, y - m * half)
-    # return [(x, y), (x, y - half), (x - half, y - side), (x - half, y - half)]
     return [(x, y), a, b, c]
 
 
 class ComplexBox:
     """
-    Complex Iso box
+    Class for drawing a Complex Iso box
     """
 
     def __init__(self, side, A, B, C, a, b, c):
@@ -102,6 +113,9 @@ class ComplexBox:
 
 
 class Left:
+    """
+    Class for drawing left handed parallelogram
+    """
 
     def __init__(self, side, B, out):
         """
@@ -120,6 +134,9 @@ class Left:
 
 
 class Right:
+    """
+    Class for drawing right handed parallelogram
+    """
 
     def __init__(self, side, C, out):
         """

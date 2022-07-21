@@ -11,6 +11,18 @@ import json
 import numpy as np
 
 
+__all__ = [
+        'solarized',
+        'getsu',
+        'getsu_set',
+        'RGBA',
+        'PaletteRNG',
+        'CosinePalette',
+        'to_hsv',
+        'to_rgb',
+        ]
+
+
 # named solarized colors
 solarized = {
     'base03':  (0, 43, 54),
@@ -38,10 +50,6 @@ def taisho_color(color):
         return r, g, b
 
 
-def T(a):
-    return list(map(taisho_color, a))
-
-
 # taisho-showa-color-vocab.json
 color_dict = None
 palette_dict = None
@@ -52,6 +60,8 @@ with open('pygart/taisho-showa-palettes.json') as f:
 
 
 def getsu(i):
+    def T(a):
+        return list(map(taisho_color, a))
     p = palette_dict['pallete'][i]
     return T(p)
 

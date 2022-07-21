@@ -5,6 +5,9 @@ import numpy as np
 from math import sqrt, cos, sin
 
 
+__all__ = ['line', 'ellipse', 'spiral']
+
+
 def line(A, B, s):
     """
     linear path of s segments from A -> B

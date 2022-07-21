@@ -7,6 +7,8 @@ bricks
 from PIL import ImageDraw
 
 
+__all__ = ['Brick']
+
 class Brick():
 
     """A class for drawing stylized rectangles"""
