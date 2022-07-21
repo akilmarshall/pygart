@@ -2,7 +2,9 @@
 
 An art project just for fun.
 
-## July 21
+## July 
+
+### 21
 
 Experiments in unity and scale extending the work from July 14.
 
@@ -27,7 +29,7 @@ Experiments in unity and scale extending the work from July 14.
 <img src=https://imgur.com/EJKcGBe.png />
 </p>
 
-## July 19
+### 19
 
 [inspiration](https://www.reddit.com/r/UrbanHell/comments/w1ursx/halle_saale_neustadt_east_germany/)
 
@@ -40,7 +42,7 @@ Experiments in unity and scale extending the work from July 14.
 <img src=https://imgur.com/hQdDvkz.png />
 </p>
 
-## July 15
+### 15
 
 City feelings with July's color palletes.
 
@@ -53,7 +55,7 @@ City feelings with July's color palletes.
 <img src=https://imgur.com/sbrGCfi.png />
 </p>
 
-## July 14
+### 14
 
 <p align="center">
 <img src=https://imgur.com/cfOolZW.png />
@@ -89,7 +91,7 @@ City feelings with July's color palletes.
 <p align = "center">Getsu 001</p>
 
 
-## July 13
+### 13
 
 <p align="center">
 <img src=https://imgur.com/UYUGDP5.png />
@@ -114,7 +116,7 @@ Bonus regular variation.
 
 
 
-## July 11
+### 11
 
 I stumbled across a particularly wonderful color pallet and gave a little more thought to the brick wall patterns (more on this in the future).
 
@@ -128,7 +130,9 @@ cosine(base2, red, green, base01)
 <img src=https://imgur.com/pimcIoC.png />
 </p>
 
-## May 12
+## May 
+
+### 12
 
 [The Algorithmic Beauty of Plants](http://algorithmicbotany.org/papers/abop/abop.pdf)
 
@@ -146,7 +150,7 @@ cosine(base2, red, green, base01)
   <img src=https://imgur.com/z7bDWGr.png />
 </p>
 
-## May 10
+### 10
 
 Brick walls colored with cosine color palettes.
 
@@ -158,7 +162,7 @@ Brick walls colored with cosine color palettes.
   <img src=https://imgur.com/pS0ztZ2.png />
 </p>
 
-## May 7
+### 7
 
 Starting with [cosine color palettes](https://iquilezles.org/articles/palettes/)
 
@@ -170,7 +174,9 @@ Starting with [cosine color palettes](https://iquilezles.org/articles/palettes/)
   <img src=https://imgur.com/hUfa6pD.png />
 </p>
 
-## April 22
+## April 
+
+### 22
 
 Experiments with parametric lines. Prototypes the stroke module
 
