@@ -5,3 +5,4 @@ from .iso import *
 from .lsystem import *
 from .path import *
 from .stroke import *
+from .canvas import *
