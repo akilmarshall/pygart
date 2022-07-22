@@ -4,6 +4,31 @@ An art project just for fun.
 
 ## July 
 
+### 21 pt 2
+
+Stacks
+
+<p align="center">
+<img src=https://imgur.com/NPOvhCq.png />
+<img src=https://imgur.com/k4GA1JR.png />
+<img src=https://imgur.com/i7VdXmI.png />
+<img src=https://imgur.com/v6rPpDe.png />
+</p>
+
+<p align="center">
+<img src=https://imgur.com/2RVrj3b.png />
+<img src=https://imgur.com/W2wTptB.png />
+<img src=https://imgur.com/4C70vXz.png />
+<img src=https://imgur.com/arMnWjB.png />
+</p>
+
+<p align="center">
+<img src=https://imgur.com/ICHkHA4.png />
+<img src=https://imgur.com/UcWuqPR.png />
+<img src=https://imgur.com/R0AOeu4.png />
+<img src=https://imgur.com/KyguGQQ.png />
+</p>
+
 ### 21
 
 Experiments in unity and scale extending the work from [July 14](https://github.com/akilmarshall/pygart#14).
