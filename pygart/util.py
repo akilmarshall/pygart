@@ -48,6 +48,6 @@ def getsu_palette_sample(
         color_row(h, k, side, p, canvas)
 
 
-def lerp(A:int, B:int, t:float) -> float:
+def lerp(A: int, B: int, t: float) -> float:
     '''Linear interpolation between A and B by t'''
     return min(A, B) + t * max(A, B)
