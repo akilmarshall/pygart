@@ -10,7 +10,7 @@ from .color import getsu_set
 from .canvas import Canvas
 
 
-__all__ = ['info', 'deg', 'radian',]
+__all__ = ['info', 'deg', 'radian', 'lerp']
 
 
 def info():
@@ -47,3 +47,7 @@ def getsu_palette_sample(
         h, k = x + gap, y + i * (side + gap)
         color_row(h, k, side, p, canvas)
 
+
+def lerp(A:int, B:int, t:float) -> float:
+    '''Linear interpolation between A and B by t'''
+    return min(A, B) + t * max(A, B)
