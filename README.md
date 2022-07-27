@@ -4,6 +4,10 @@ An art project just for fun.
 
 ## July 
 
+### 26
+
+![untitled 1](https://imgur.com/dumOe2T.mp4)
+
 ### 21 pt 2
 
 Stacks
