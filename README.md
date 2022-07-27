@@ -6,11 +6,7 @@ An art project just for fun.
 
 ### 26
 
-<video width="500" height="500" controls>
-  <source src=https://imgur.com/sH8ar6i.mp4 type="video/mp4">
-  <source src="movie.mp4" type="video/ogg">
-  Your browser does not support the video tag.
-</video>
+![untitled 1](https://imgur.com/dumOe2T.mp4)
 
 ### 21 pt 2
 
