@@ -4,6 +4,14 @@ An art project just for fun.
 
 ## July 
 
+### 26
+
+<video width="500" height="500" controls>
+  <source src=https://imgur.com/sH8ar6i.mp4 type="video/mp4">
+  <source src="movie.mp4" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
+
 ### 21 pt 2
 
 Stacks
