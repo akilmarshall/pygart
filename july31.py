@@ -5,6 +5,7 @@ from random import randint
 import numpy as np
 from collections import defaultdict
 
+
 class GOL:
     def __init__(self, data):
         self.data = data
@@ -53,7 +54,6 @@ class GOL:
 
 
 p = PaletteRNG(list(getsu_set('july'))[4])
-canvas = Canvas(*info(), color=p())
 
 def stack(x, y, h, a, b, c, d, e, f, canvas):
     '''draw a stack of ComplexBox with h units. '''
@@ -99,6 +99,7 @@ class Frame:
         
     def render(self, canvas):
         data = self.data.population_map()
+        # data = self.data.data
         for x, y in self._points():
             n = data[x][y] 
             floors = self.colors[(x, y)][0:n]
@@ -106,12 +107,15 @@ class Frame:
                 a, b, c, d, e, f = params
                 h = x * self.radius
                 k = y * self.radius
-                floor(h, k - i * self.radius // 2, self.radius, a, b, c, d, e, f, canvas)
+                floor(h + self.radius // 2, k - i * self.radius // 2, self.radius, a, b, c, d, e, f, canvas)
 
 
-steps = 200
-frame = Frame(75, 75, 10, p)
+steps = 500 
+frame = Frame(50, 50, 10, p)
+bg = p()
 for i in range(steps):
+    print(i)
+    canvas = Canvas(*info(), color=bg)
     frame.step()
     frame.render(canvas)
     canvas.save(f'frames/{i}.png')
