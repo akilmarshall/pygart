@@ -3,6 +3,11 @@
 An art project just for fun.
 
 ## July 
+### 30
+
+<p align="center">
+<img src=https://imgur.com/xeJp6F6.gif />
+</p>
 
 ### 26
 
