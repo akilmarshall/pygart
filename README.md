@@ -2,6 +2,19 @@
 
 An art project just for fun.
 
+## August
+
+### 3
+
+<p align="center">
+<img src=https://imgur.com/JzWcvVP.png />
+<img src=https://imgur.com/atvNs8Y.png />
+<img src=https://imgur.com/Sf4Ew9L.png />
+<img src=https://imgur.com/HaaTdCg.png />
+<img src=https://imgur.com/6KLgaOc.png />
+<img src=https://imgur.com/zAieule.png />
+</p>
+
 ## July
 
 ### 31
