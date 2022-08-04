@@ -2,7 +2,19 @@
 
 An art project just for fun.
 
-## July 
+## July
+
+### 31
+
+<p align="center">
+<img src=https://imgur.com/iNngFTk.gif />
+</p>
+
+### 30
+
+<p align="center">
+<img src=https://imgur.com/xeJp6F6.gif />
+</p>
 
 ### 26
 
