@@ -4,6 +4,38 @@ An art project just for fun.
 
 ## August
 
+### 5
+
+<p align="center">
+<img src=https://imgur.com/zNyPUe9.png />
+<img src=https://imgur.com/vHC11cU.png />
+<img src=https://imgur.com/MQTdYa1.png />
+<img src=https://imgur.com/fmiyryP.png />
+<img src=https://imgur.com/ixdHSwK.png />
+<img src=https://imgur.com/OAtsILu.png />
+<img src=https://imgur.com/piAXCTO.png />
+<img src=https://imgur.com/9waP0SI.png />
+<img src=https://imgur.com/VDwGCLj.png />
+<img src=https://imgur.com/bmDqhZh.png />
+<img src=https://imgur.com/aoBJchC.png />
+<img src=https://imgur.com/z1ZDwCY.png />
+<img src=https://imgur.com/fOA22dZ.png />
+<img src=https://imgur.com/HTEFaZW.png />
+<img src=https://imgur.com/6eAmVux.png />
+<img src=https://imgur.com/09MjI0H.png />
+<img src=https://imgur.com/Z52aJ63.png />
+<img src=https://imgur.com/XjjzO5G.png />
+<img src=https://imgur.com/FL4tztQ.png />
+<img src=https://imgur.com/Ka8jnga.png />
+<img src=https://imgur.com/OeXqQZD.png />
+<img src=https://imgur.com/1k3HHl9.png />
+<img src=https://imgur.com/9OMzghx.png />
+<img src=https://imgur.com/J6Lx5kd.png />
+<img src=https://imgur.com/Sigg7OW.png />
+<img src=https://imgur.com/WCdtZxK.png />
+</p>
+
+
 ### 3
 
 <p align="center">
