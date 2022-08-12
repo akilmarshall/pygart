@@ -4,6 +4,18 @@ An art project just for fun.
 
 ## August
 
+### 11
+
+<p align="center">
+<img src=https://imgur.com/a2p17QI.png />
+<img src=https://imgur.com/E0RSt1t.png />
+<img src=https://imgur.com/CNIR0KN.png />
+<img src=https://imgur.com/GRCHzFl.png />
+<img src=https://imgur.com/RBpVm44.png />
+<img src=https://imgur.com/f1Zzuwl.png />
+<img src=https://imgur.com/w1Nxaaq.png />
+</p>
+
 ### 5
 
 <p align="center">
