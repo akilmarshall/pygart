@@ -6,6 +6,8 @@ An art project just for fun.
 
 ### 11 pt 2
 
+todo add harmony
+
 <p align="center">
 <img src=https://imgur.com/1Kd3X5U.png />
 <img src=https://imgur.com/lnieIfi.png />
