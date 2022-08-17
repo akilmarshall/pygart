@@ -4,6 +4,14 @@ An art project just for fun.
 
 ## August
 
+### 12
+
+<p align="center">
+<img src=https://imgur.com/aBWWYg1.png />
+<img src=https://imgur.com/t8S5Eu0.png />
+<img src=https://imgur.com/rHroADP.png />
+</p>
+
 ### 11 pt 2
 
 todo add harmony
