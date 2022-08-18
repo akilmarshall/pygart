@@ -15,6 +15,14 @@ Kites.
 <img src=https://imgur.com/UjLpStV.png />
 <img src=https://imgur.com/zMle1k4.png />
 <img src=https://imgur.com/cXlAg7h.png />
+
+### 12
+
+<p align="center">
+<img src=https://imgur.com/aBWWYg1.png />
+<img src=https://imgur.com/t8S5Eu0.png />
+<img src=https://imgur.com/rHroADP.png />
+
 </p>
 
 ### 11 pt 2
