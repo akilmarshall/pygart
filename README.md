@@ -4,6 +4,19 @@ An art project just for fun.
 
 ## August
 
+### 16
+
+Kites.
+
+<p align="center">
+<img src=https://imgur.com/cn8kPdX.png />
+<img src=https://imgur.com/EPeTyY6.png />
+<img src=https://imgur.com/y9x4S8d.png />
+<img src=https://imgur.com/UjLpStV.png />
+<img src=https://imgur.com/zMle1k4.png />
+<img src=https://imgur.com/cXlAg7h.png />
+</p>
+
 ### 11 pt 2
 
 todo add harmony
