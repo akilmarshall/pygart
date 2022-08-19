@@ -4,6 +4,19 @@ An art project just for fun.
 
 ## August
 
+### 18
+
+Pool chairs.
+
+<p align="center">
+<img src=https://imgur.com/QRSV7sg.png />
+<img src=https://imgur.com/pj4dbTo.png />
+<img src=https://imgur.com/fQPwhPG.png />
+<img src=https://imgur.com/g49w3lT.png />
+<img src=https://imgur.com/yIAg8RG.png />
+<img src=https://imgur.com/r8kc5Re.png />
+</p>
+
 ### 16
 
 Kites.
@@ -15,6 +28,7 @@ Kites.
 <img src=https://imgur.com/UjLpStV.png />
 <img src=https://imgur.com/zMle1k4.png />
 <img src=https://imgur.com/cXlAg7h.png />
+</p>
 
 ### 12
 
