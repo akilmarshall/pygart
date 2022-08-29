@@ -4,6 +4,20 @@ An art project just for fun.
 
 ## August
 
+### 28
+Attempts at generalizing tiling methods.
+
+<p align="center">
+<img src=https://imgur.com/tL9xJBr.png />
+<img src=https://imgur.com/3ozG4B4.png />
+<img src=https://imgur.com/AbhPupi.png />
+<img src=https://imgur.com/hixqcEw.png />
+<img src=https://imgur.com/7iY90tr.png />
+<img src=https://imgur.com/rVsgcNu.png />
+<img src=https://imgur.com/i8BwzR6.png />
+<img src=https://imgur.com/rp4B8j0.png />
+</p>
+
 ### 18
 
 Pool chairs.
