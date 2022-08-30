@@ -4,6 +4,19 @@ An art project just for fun.
 
 ## August
 
+### 29
+
+Generalization of tiling continues, I'm happier about the way the code looks more so than the products..
+
+<p align="center">
+<img src=https://imgur.com/YHS26OI.png />
+<img src=https://imgur.com/qihEn48.png />
+<img src=https://imgur.com/G3AKLu9.png />
+<img src=https://imgur.com/vK5xHJR.png />
+<img src=https://imgur.com/ACJ2ulw.png />
+<img src=https://imgur.com/XTf2ZP0.png />
+</p>
+
 ### 28
 Attempts at generalizing tiling methods.
 
