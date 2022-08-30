@@ -10,7 +10,7 @@ from .color import getsu_set
 from .canvas import Canvas
 
 
-__all__ = ['info', 'deg', 'radian', 'lerp']
+__all__ = ['info', 'deg', 'radian', 'lerp', 'V']
 
 
 def info():
@@ -51,3 +51,36 @@ def getsu_palette_sample(
 def lerp(A: int, B: int, t: float) -> float:
     '''Linear interpolation between A and B by t'''
     return min(A, B) + t * max(A, B)
+
+class V:
+    """
+    A simple class representing a 2D vector over Z
+    adds in the usual way
+    """
+    def __init__(self, x: float, y: float):
+        self.x: float = x
+        self.y: float = y
+
+    def v(self) -> tuple[float, float]:
+        return int(self.x), int(self.y)
+
+    def __add__(self, other):
+        return V(self.x + other.x, self.y + other.y)
+
+    def __sub__(self, other):
+        return self + V(-other.x, -other.y)
+
+    def __call__(self):
+        return self.v()
+
+    def __repr__(self):
+        return f'V({self.x}, {self.y})'
+    
+    def __mul__(self, s):
+        return V(self.x * s, self.y * s)
+
+    def __rmul__(self, s):
+        return V(self.x * s, self.y * s)
+
+    def __eq__(self, other):
+        return self.x == other.x and self.y == other.y
