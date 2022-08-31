@@ -4,6 +4,19 @@ An art project just for fun.
 
 ## August
 
+### 30
+
+Uhh outlines suck? Also abstracted the ability to tile from the figures.
+
+<p align="center">
+<img src=https://imgur.com/AMG9758.png />
+<img src=https://imgur.com/v63lgNB.png />
+<img src=https://imgur.com/akhAzDL.png />
+<img src=https://imgur.com/Ygbfh4H.png />
+<img src=https://imgur.com/FS5KdAT.png />
+<img src=https://imgur.com/B91OnGU.png />
+</p>
+
 ### 29
 
 Generalization of tiling continues, I'm happier about the way the code looks more so than the products..
