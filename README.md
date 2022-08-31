@@ -9,12 +9,12 @@ An art project just for fun.
 Uhh outlines suck? Also abstracted the ability to tile from the figures.
 
 <p align="center">
-<img src=https://imgur.com/AMG9758.png />
-<img src=https://imgur.com/v63lgNB.png />
-<img src=https://imgur.com/akhAzDL.png />
-<img src=https://imgur.com/Ygbfh4H.png />
-<img src=https://imgur.com/FS5KdAT.png />
-<img src=https://imgur.com/B91OnGU.png />
+<img src=https://imgur.com/mevTOJt.png />
+<img src=https://imgur.com/lFc7nkt.png />
+<img src=https://imgur.com/hJ156dH.png />
+<img src=https://imgur.com/Wq256SL.png />
+<img src=https://imgur.com/cgmNErW.png />
+<img src=https://imgur.com/AHMjgTw.png />
 </p>
 
 ### 29
