@@ -1,7 +1,7 @@
 from itertools import product
 from math import cos, pi, sin
 
-from PIL import ImageDraw
+from aggdraw import Draw, Pen, Brush
 
 from pygart import Canvas, PaletteRNG, V, getsu_set, info
 from random import shuffle
@@ -24,7 +24,6 @@ class ContainerA:
         :u:         unit length
         :s:         length ratio
         '''
-        # self.u = u
         self.s = s
         self.p = pallete
         self.width = width
@@ -48,20 +47,23 @@ class ContainerA:
     def args(self):
         return {'fill':self.p(), 'outline':self.p(), 'width':self.width}
 
-    def args2(self):
-        return {'fill':self.p(), 'width':self.width}
+    def pen(self):
+        return Pen(self.p(), self.width)
+
+    def brush(self):
+        return Brush(self.p())
 
     def draw(self, img):
-        draw = ImageDraw.Draw(img)
-        draw.polygon((self.root(), self.D(), self.E(), self.A()), **self.args())  # side face
-        draw.polygon((self.A(), self.E(), self.F(), self.C()), **self.args())     # top face
-        draw.polygon((self.root(), self.A(), self.C(), self.B()), **self.args())  # front face
-        draw.line((self.root(), self.D()), **self.args2())
-        draw.line((self.A(), self.E()), **self.args2())
-        draw.line((self.C(), self.F()), **self.args2())
-        draw.line((self.D(), self.E()), **self.args2())
-        draw.line((self.F(), self.E()), **self.args2())
-
+        draw = Draw(img)
+        draw.polygon((*self.root(), *self.D(), *self.E(), *self.A()), self.brush(), self.pen())  # side face
+        draw.polygon((*self.A(), *self.E(), *self.F(), *self.C()), self.brush(), self.pen())     # top face
+        draw.polygon((*self.root(), *self.A(), *self.C(), *self.B()), self.brush(), self.pen())  # front face
+        draw.line((*self.root(), *self.D()), self.pen())
+        draw.line((*self.A(), *self.E()), self.pen())
+        draw.line((*self.C(), *self.F()), self.pen())
+        draw.line((*self.D(), *self.E()), self.pen())
+        draw.line((*self.F(), *self.E()), self.pen())
+        draw.flush()
 
 
 class ContainerB(ContainerA):
