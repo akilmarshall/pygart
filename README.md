@@ -2,6 +2,27 @@
 
 An art project just for fun.
 
+## September
+
+### 3
+
+Throw back to Aug 21, but not quite the same. uses 1x1, 1x2 (left and right handed)
+
+<p align="center">
+<img src=https://imgur.com/5hPgvFf.png />
+<img src=https://imgur.com/p3EPYf2.png />
+<img src=https://imgur.com/IMhYGmK.png />
+<img src=https://imgur.com/9hDsvjg.png />
+<img src=https://imgur.com/WvEZIOo.png />
+<img src=https://imgur.com/cYKEXEX.png />
+<img src=https://imgur.com/7SUMOi7.png />
+<img src=https://imgur.com/CvTYZ39.png />
+<img src=https://imgur.com/updmhAK.png />
+<img src=https://imgur.com/sFeLwdD.png />
+<img src=https://imgur.com/XLJCcxB.png />
+<img src=https://imgur.com/tNHsZIu.png />
+</p>
+
 ## August
 
 ### 30
