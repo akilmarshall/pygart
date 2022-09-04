@@ -6,21 +6,23 @@ An art project just for fun.
 
 ### 3
 
-Throw back to Aug 21, but not quite the same. uses 1x1, 1x2 (left and right handed)
+Throw back to Aug 21, but not quite the same. uses 1x1, 1x2 (left and right handed).
+
+The aliasing in PIL drawing functions became unacceptable, now using [[https://github.com/pytroll/aggdraw|aggdraw]] moving forward.
 
 <p align="center">
-<img src=https://imgur.com/5hPgvFf.png />
-<img src=https://imgur.com/p3EPYf2.png />
-<img src=https://imgur.com/IMhYGmK.png />
-<img src=https://imgur.com/9hDsvjg.png />
-<img src=https://imgur.com/WvEZIOo.png />
-<img src=https://imgur.com/cYKEXEX.png />
-<img src=https://imgur.com/7SUMOi7.png />
-<img src=https://imgur.com/CvTYZ39.png />
-<img src=https://imgur.com/updmhAK.png />
-<img src=https://imgur.com/sFeLwdD.png />
-<img src=https://imgur.com/XLJCcxB.png />
-<img src=https://imgur.com/tNHsZIu.png />
+<img src=https://imgur.com/husehHC.png />
+<img src=https://imgur.com/NHVtWE2.png />
+<img src=https://imgur.com/39iOFnh.png />
+<img src=https://imgur.com/BguXITr.png />
+<img src=https://imgur.com/iA6GDm7.png />
+<img src=https://imgur.com/rLj66wA.png />
+<img src=https://imgur.com/uvZbksF.png />
+<img src=https://imgur.com/DDOGGyw.png />
+<img src=https://imgur.com/xLpk86B.png />
+<img src=https://imgur.com/2Mkt4pp.png />
+<img src=https://imgur.com/YFo2shV.png />
+<img src=https://imgur.com/RPVNvLR.png />
 </p>
 
 ## August
