@@ -1,9 +1,16 @@
-from itertools import cycle, product
+from itertools import product
 from math import cos, pi, sin
 
 from PIL import ImageDraw
 
 from pygart import Canvas, PaletteRNG, V, getsu_set, info
+from random import shuffle
+
+def shuffle_cycle(lst):
+    while True:
+        for l in lst:
+            yield l
+        shuffle(lst)
 
 
 def S(magnitude, theta):
@@ -12,7 +19,7 @@ def S(magnitude, theta):
 
 
 class ContainerA:
-    def __init__(self, pallete: PaletteRNG, s: int=6): 
+    def __init__(self, pallete: PaletteRNG, s: int=6, width=4): 
         '''
         :u:         unit length
         :s:         length ratio
@@ -20,6 +27,7 @@ class ContainerA:
         # self.u = u
         self.s = s
         self.p = pallete
+        self.width = width
 
     def config(self, u,):
         self.u = u
@@ -38,18 +46,21 @@ class ContainerA:
         self.br = self.D + V(0, self.s * dy)
 
     def args(self):
-        return {'fill':self.p(), 'outline':self.p(), 'width':0}
+        return {'fill':self.p(), 'outline':self.p(), 'width':self.width}
+
+    def args2(self):
+        return {'fill':self.p(), 'width':self.width}
 
     def draw(self, img):
         draw = ImageDraw.Draw(img)
         draw.polygon((self.root(), self.D(), self.E(), self.A()), **self.args())  # side face
         draw.polygon((self.A(), self.E(), self.F(), self.C()), **self.args())     # top face
         draw.polygon((self.root(), self.A(), self.C(), self.B()), **self.args())  # front face
-        # draw.line((self.root(), self.D()), **self.args())
-        # draw.line((self.A(), self.E()), **self.args())
-        # draw.line((self.C(), self.F()), **self.args())
-        # draw.line((self.D(), self.E()), **self.args())
-        # draw.line((self.F(), self.E()), **self.args())
+        draw.line((self.root(), self.D()), **self.args2())
+        draw.line((self.A(), self.E()), **self.args2())
+        draw.line((self.C(), self.F()), **self.args2())
+        draw.line((self.D(), self.E()), **self.args2())
+        draw.line((self.F(), self.E()), **self.args2())
 
 
 
@@ -79,7 +90,7 @@ class Tiling:
             fig.config(self.inner)
 
     def tile(self, img, fname='out.png'):
-        for (i, j), fig in zip(product(range(self.s + 1), range(self.s + 1)), cycle(self.figs)):
+        for (i, j), fig in zip(product(range(self.s + 1), range(self.s + 1)), shuffle_cycle(self.figs)):
             i *= 2 * self.inner * sin(pi / 3)
             j *= 2 * self.inner * sin(pi / 3)
             fig.setup(i, j)
@@ -93,5 +104,5 @@ i = int(i)
 colors = list(getsu_set('september'))[i]
 p = PaletteRNG(colors)
 canvas = Canvas(width, height, color=p())
-figs = [ContainerA(p, s=1), ContainerA(p, s=2), ContainerB(p, s=2)]
-Tiling(figs, width, 50).tile(canvas.img,)
+figs = [ContainerA(p, s=1), ContainerA(p, s=3), ContainerB(p, s=2)]
+Tiling(figs, width, 40).tile(canvas.img,)
