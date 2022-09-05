@@ -4,6 +4,18 @@ An art project just for fun.
 
 ## September
 
+### 4
+
+<p align="center">
+<img src=https://imgur.com/p7sqGk6.png />
+<img src=https://imgur.com/JTnGCLs.png />
+<img src=https://imgur.com/N6tIOcN.png />
+<img src=https://imgur.com/6OVzFhD.png />
+<img src=https://imgur.com/InWaxDb.png />
+<img src=https://imgur.com/B636PDh.png />
+<img src=https://imgur.com/LkGkGc6.png />
+</p>
+
 ### 3
 
 Throw back to Aug 21, but not quite the same. uses 1x1, 1x2 (left and right handed).
