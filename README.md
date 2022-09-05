@@ -20,7 +20,7 @@ An art project just for fun.
 
 Throw back to Aug 21, but not quite the same. uses 1x1, 1x2 (left and right handed).
 
-The aliasing in PIL drawing functions became unacceptable, now using [[https://github.com/pytroll/aggdraw|aggdraw]] moving forward.
+The aliasing in PIL drawing functions became unacceptable, now using [aggdraw](https://github.com/pytroll/aggdraw) moving forward.
 
 <p align="center">
 <img src=https://imgur.com/husehHC.png />
