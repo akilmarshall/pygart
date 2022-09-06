@@ -4,6 +4,19 @@ An art project just for fun.
 
 ## September
 
+### 5
+
+Doing more by doing less
+
+<p align="center">
+<img src=https://imgur.com/d34NoCn.png />
+<img src=https://imgur.com/ch43AcQ.png />
+<img src=https://imgur.com/j47F3QL.png />
+<img src=https://imgur.com/N0in4RK.png />
+<img src=https://imgur.com/Tns5FCK.png />
+<img src=https://imgur.com/9KL2RTW.png />
+</p>
+
 ### 4
 
 <p align="center">
