@@ -4,6 +4,19 @@ An art project just for fun.
 
 ## September
 
+### 6
+
+50% distribution, only rolled 2 colors per form, increases the harmony in a nice way.  It is possible to not add outlines but I think it's much better with them.
+
+<p align="center">
+<img src=https://imgur.com/vf4wOVs.png />
+<img src=https://imgur.com/sZNMsi9.png />
+<img src=https://imgur.com/68WKohj.png />
+<img src=https://imgur.com/3gOxSQL.png />
+<img src=https://imgur.com/yScbRoQ.png />
+<img src=https://imgur.com/bm6tsy3.png />
+</p>
+
 ### 5
 
 Doing more by doing less
