@@ -4,6 +4,19 @@ An art project just for fun.
 
 ## September
 
+### 15
+
+Clamoring.  The usual tiling with a random order to the points visited. Each unit form's size varies over some range (u + u * x, for x in [a, b)).
+
+<p align="center">
+<img src=https://imgur.com/KrePs9P.png />
+<img src=https://imgur.com/O5ZSps5.png />
+<img src=https://imgur.com/BAgB96u.png />
+<img src=https://imgur.com/b7vrOiR.png />
+<img src=https://imgur.com/y5KfQIl.png />
+<img src=https://imgur.com/mY6mMs4.png />
+</p>
+
 ### 6
 
 50% distribution, only rolled 2 colors per form, increases the harmony in a nice way.  It is possible to not add outlines but I think it's much better with them.
