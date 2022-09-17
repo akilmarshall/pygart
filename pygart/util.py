@@ -3,14 +3,17 @@ File: util.py
 Description: Utility module, universal/odd functions and classes belong here
 """
 
-from sys import argv
 from math import pi
+from os.path import exists
+from sys import argv
+from datetime import datetime
+
 from .brick import Brick
-from .color import getsu_set
 from .canvas import Canvas
+from .color import getsu_set 
 
 
-__all__ = ['info', 'deg', 'radian', 'lerp', 'V']
+__all__ = ['info', 'deg', 'radian', 'lerp', 'V', 'produce']
 
 
 def info():
@@ -84,3 +87,59 @@ class V:
 
     def __eq__(self, other):
         return self.x == other.x and self.y == other.y
+
+    def __floordiv__(self, d):
+        return V(self.x // d, self.y // d)
+
+    def __truediv__(self, d):
+        return V(self.x / d, self.y / d)
+
+    def __neg__(self):
+        return -1 * self
+
+def produce(unit_size=40, scale=20):
+    """
+    If the first argument passed to the script is 'produce' a special set of parameters are instead accepted
+    python script.py produce w h ppi extra out
+
+    scale used in production mode
+    unit_size used in normal mode
+
+    :scale:     the relative size of the unit forms
+    :unit_size: the pixel size of the unit forms
+    """
+    match argv:
+        case [_, 'produce', w, h, ppi, extra, out]:
+            """
+            for print production, with parameters that make it easy
+            (w, h), the print dimensions in inches
+            ppi, the requested pixels per inch in the resulting image
+            extra, parameters
+            out, the file name for the output without an extension
+            """
+
+            w = int(w)
+            h = int(h)
+            ppi = int(ppi)
+            i = int(extra)
+            resolution = ppi * V(w, h)  # resolution / scale = unit form size
+            width, height = resolution()
+            unit_size = width // scale
+
+            out_fname = f'{out}({w}x{h} {ppi}ppi)'
+            j = 1
+            # dont overwrite 
+            while exists(f'{out_fname}.png'):
+                out_fname = f'{out}({w}x{h} {ppi}ppi){j}'
+                j += 1
+            out = f'{out_fname}.png'
+            print(f'producing -> {out}')
+            time = datetime.now()
+            print(f'starting: {time.hour}:{time.minute:0>2d}')
+        case _:
+            # normal usage
+            width, height, i = info()
+            i = int(i)
+            unit_size = 40
+            out = 'out.png'
+    return width, height, out, i, unit_size
