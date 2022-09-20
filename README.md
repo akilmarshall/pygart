@@ -4,6 +4,17 @@ An art project just for fun.
 
 ## September
 
+### 19
+
+Warped.
+
+<p align="center">
+<img src=https://imgur.com/o1XcVhT.png />
+<img src=https://imgur.com/dSWYM1j.png />
+<img src=https://imgur.com/HbCAvKy.png />
+</p>
+
+
 ### 15
 
 Clamoring.  The usual tiling with a random order to the points visited. Each unit form's size varies over some range (u + u * x, for x in [a, b)).
