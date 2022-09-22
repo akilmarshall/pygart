@@ -1,5 +1,7 @@
 # Pygart
 
+**Py**thon **G**enerative **A**rt
+
 An art project just for fun.
 
 ## September
