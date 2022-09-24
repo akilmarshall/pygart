@@ -3,17 +3,18 @@ File: util.py
 Description: Utility module, universal/odd functions and classes belong here
 """
 
+from argparse import ArgumentParser
+from datetime import datetime
 from math import pi
 from os.path import exists
 from sys import argv
-from datetime import datetime
 
 from .brick import Brick
 from .canvas import Canvas
 from .color import getsu_set 
 
 
-__all__ = ['info', 'deg', 'radian', 'lerp', 'V', 'produce']
+__all__ = ['info', 'deg', 'radian', 'lerp', 'V', 'produce', 'parameters']
 
 
 def info():
@@ -143,3 +144,26 @@ def produce(unit_size=40, scale=20):
             unit_size = 40
             out = 'out.png'
     return width, height, out, i, unit_size
+
+def parameters(WIDTH=700, HEIGHT=700, OUT_NAME='out.png', p=0):
+    """
+    Defines the default parameter bundle, the parameters modify the default values defined at the CLI.
+    month parameter default is unmodifyable and defaults to the month on the calender at run time.
+    Built on ArgumentParser thus implements --help at the CLI.
+
+    :WIDTH:     output width in pixels 
+    :HEIGHT:    output height in pixels 
+    :OUT_NAME:  output file name
+    :p:         pallete index for a given month
+    """
+    now = datetime.now()
+    MONTH = ["january" ,"february" ,"march" ,"april" ,"may" ,"june" ,"july" ,"august" ,"september" ,"october" ,"november" ,"december"][now.month - 1]
+
+    parser = ArgumentParser()
+    parser.add_argument('-width', type=int, default=WIDTH, help=f'Image width of the output in pixels. default {WIDTH}') 
+    parser.add_argument('-height', type=int, default=HEIGHT, help=f'Image height of the output in pixels. default {HEIGHT}') 
+    parser.add_argument('-out', type=str, default='out.png', help=f'File name of the output image. default: {OUT_NAME}') 
+    parser.add_argument('-month', type=str, default=MONTH, help=f"Which month's color palletes to select from. default: {MONTH}") 
+    parser.add_argument('-p', type=int, default=p, choices=[0, 1, 2, 3, 4, 5], help=f"Index of the pallete to use. default: {p}") 
+
+    return parser.parse_args()
