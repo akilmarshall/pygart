@@ -162,7 +162,7 @@ def parameters(WIDTH=700, HEIGHT=700, OUT_NAME='out.png', p=0):
     parser = ArgumentParser()
     parser.add_argument('-width', type=int, default=WIDTH, help=f'Image width of the output in pixels. default {WIDTH}') 
     parser.add_argument('-height', type=int, default=HEIGHT, help=f'Image height of the output in pixels. default {HEIGHT}') 
-    parser.add_argument('-out', type=str, default='out.png', help=f'File name of the output image. default: {OUT_NAME}') 
+    parser.add_argument('-out', type=str, default=OUT_NAME, help=f'File name of the output image. default: {OUT_NAME}') 
     parser.add_argument('-month', type=str, default=MONTH, help=f"Which month's color palletes to select from. default: {MONTH}") 
     parser.add_argument('-p', type=int, default=p, choices=[0, 1, 2, 3, 4, 5], help=f"Index of the pallete to use. default: {p}") 
 
