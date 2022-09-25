@@ -1,7 +1,7 @@
-from pygart import info, Canvas, getsu_set, V, PaletteRNG
+from pygart import Canvas, V, PaletteRNG, month_palette, parameters
 from itertools import product, cycle
 
-from PIL import ImageDraw
+from aggdraw import Draw, Brush
 
 
 class FigureA:
@@ -27,25 +27,31 @@ class FigureA:
         self.H = self.G - 2 * xact
         self.I = self.H - yact
         self.J = self.A - 2 * xact
+
     def args(self):
         return {'fill':self.p(), 'outline':self.p(), 'width':0}
 
+    def brush(self):
+        return Brush(self.p())
+
     def draw(self, img):
-        d = ImageDraw.Draw(img)
-        d.polygon((self.J(), self.A(), self.I()), **self.args())
-        d.polygon((self.C(), self.E(), self.G()), **self.args())
-        d.polygon((self.A(), self.D(), self.C(), self.G(), self.F(), self.I()), **self.args())
-        d.polygon((self.I(), self.F(), self.G(), self.H()), **self.args())
-        d.polygon((self.A(), self.B(), self.C(), self.D()), **self.args())
+        draw = Draw(img)
+        draw.polygon((*self.J(), *self.A(), *self.I()), self.brush())
+        draw.polygon((*self.C(), *self.E(), *self.G()), self.brush())
+        draw.polygon((*self.A(), *self.D(), *self.C(), *self.G(), *self.F(), *self.I()), self.brush())
+        draw.polygon((*self.I(), *self.F(), *self.G(), *self.H()), self.brush())
+        draw.polygon((*self.A(), *self.B(), *self.C(), *self.D()), self.brush())
+        draw.flush()
 
 class FigureB(FigureA):
     def draw(self, img):
-        d = ImageDraw.Draw(img)
-        d.polygon((self.J(), self.A(), self.I()), **self.args())
-        d.polygon((self.A(), self.B(), self.C()), **self.args())
-        d.polygon((self.C(), self.E(), self.G()), **self.args())
-        d.polygon((self.G(), self.H(), self.I()), **self.args())
-        d.polygon((self.A(), self.C(), self.G(), self.I()), **self.args())
+        draw = Draw(img)
+        draw.polygon((*self.J(), *self.A(), *self.I()), self.brush())
+        draw.polygon((*self.A(), *self.B(), *self.C()), self.brush())
+        draw.polygon((*self.C(), *self.E(), *self.G()), self.brush())
+        draw.polygon((*self.G(), *self.H(), *self.I()), self.brush())
+        draw.polygon((*self.A(), *self.C(), *self.G(), *self.I()), self.brush())
+        draw.flush()
 
 
 class Tiling:
@@ -68,8 +74,8 @@ class Tiling:
         canvas.save(fname)
 
 
-p = PaletteRNG(list(getsu_set('august'))[0])
-width, height, path = info()
-canvas = Canvas(width, height)
+args = parameters()
+p = PaletteRNG(list(month_palette(args.month, args.p)))
+canvas = Canvas(args.width, args.height)
 figs = [FigureA(p), FigureB(p)]
-Tiling(figs, width, 50).tile(canvas.img)
+Tiling(figs, args.width, 300).tile(canvas.img, args.out)
