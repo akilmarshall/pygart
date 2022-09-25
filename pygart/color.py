@@ -3,10 +3,12 @@ File: color.py
 Description: Named colors, color palettes, and other color functions
 """
 
-from math import pi
-from random import choice, random
+from configparser import ConfigParser
 from itertools import permutations
 import json
+from math import pi
+from pathlib import Path
+from random import choice, random
 
 import numpy as np
 
@@ -20,6 +22,7 @@ __all__ = [
         'CosinePalette',
         'to_hsv',
         'to_rgb',
+        'month_palette',
         ]
 
 
@@ -70,6 +73,16 @@ def getsu_set(month):
     if month in palette_dict:
         for i in palette_dict[month]:
             yield getsu(i)
+
+palettes = ConfigParser()
+palette_path = Path(__file__).with_stem('palettes').with_suffix('.ini')
+palettes.read(palette_path)
+glossary = palettes['GLOSSARY']
+
+def month_palette(month: str, i: str):
+    for color in palettes[month.upper()][i].split(','):
+        r, g, b = [int(x) for x in glossary[color].split(',')]
+        yield (r, g, b)
 
 
 def RGBA(color: tuple[int, int, int], a: float = 1.) -> tuple[int, int, int, int]:
