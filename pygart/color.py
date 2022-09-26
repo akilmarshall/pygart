@@ -163,7 +163,7 @@ class CosinePaletteRNG:
         return self.palette(t)
 
 
-def to_hsv(r: int, g: int, b: int) -> tuple[int, float, float]:
+def to_hsv(r: float, g: float, b: float) -> tuple[float, float, float]:
     """
     Convert 8bit rgb channels into (hue, saturation, value)
     """
