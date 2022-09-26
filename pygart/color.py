@@ -23,6 +23,7 @@ __all__ = [
         'to_hsv',
         'to_rgb',
         'month_palette',
+        'PaletteOrdered',
         ]
 
 
@@ -104,6 +105,25 @@ class PaletteRNG:
     def __call__(self):
         return choice(self.colors)
 
+    def __len__(self):
+        return len(self.colors)
+
+class PaletteOrdered:
+    '''
+    A simple uniformly random color pallete over some intial set of colors
+    '''
+
+    def __init__(self, colors):
+        self.colors = colors
+        self.i = -1
+        self.l = len(colors)
+
+    def __call__(self):
+        self.i += 1
+        return self.colors[self.i % self.l]
+
+    def __len__(self):
+        return len(self.colors)
 
 class CosinePalette:
     def __init__(self, a, b, c, d):
