@@ -6,6 +6,19 @@ An art project just for fun.
 
 ## September
 
+### 25
+
+Vortices.
+
+<p align="center">
+<img src=https://imgur.com/nlAMoZH.png />
+<img src=https://imgur.com/eTXz65T.png />
+<img src=https://imgur.com/ajHHLFv.png />
+<img src=https://imgur.com/vW7qn2K.png />
+<img src=https://imgur.com/JvVuG7I.png />
+<img src=https://imgur.com/a3SDCHG.png />
+</p>
+
 ### 19
 
 Warped.
