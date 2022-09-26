@@ -3,6 +3,7 @@ module to generate paths, sequences of 2 component vectors
 '''
 import numpy as np
 from math import sqrt, cos, sin
+from pygart import V
 
 
 __all__ = ['line', 'ellipse', 'spiral']
@@ -12,7 +13,7 @@ def line(A, B, s):
     """
     linear path of s segments from A -> B
     """
-    return np.linspace(A, B, s)
+    return list(map(lambda x: V(*x), np.linspace(A, B, s)))
 
 
 def ellipse(x: int, y: int, a: int, b: int, n: int, t: float, start: float=0.):
