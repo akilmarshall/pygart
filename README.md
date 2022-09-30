@@ -6,6 +6,19 @@ An art project just for fun.
 
 ## September
 
+### 29
+
+<p align="center">
+<img src=https://imgur.com/Qc6ZCud.png />
+<img src=https://imgur.com/WZeODq1.png />
+<img src=https://imgur.com/Fn4kLu9.png />
+<img src=https://imgur.com/VMnzRU8.png />
+<img src=https://imgur.com/9dBCZvM.png />
+<img src=https://imgur.com/YAJwMYI.png />
+<img src=https://imgur.com/OikSfqX.png />
+<img src=https://imgur.com/AzZ9D9Q.png />
+</p>
+
 ### 25
 
 Vortices.
