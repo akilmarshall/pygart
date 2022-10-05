@@ -4,6 +4,19 @@
 
 An art project just for fun.
 
+## October
+
+### 4
+
+<p align="center">
+<img src=https://imgur.com/ia35w5E.png />
+<img src=https://imgur.com/V6xAegZ.png />
+<img src=https://imgur.com/5g2w7Hs.png />
+<img src=https://imgur.com/baTFZDp.png />
+<img src=https://imgur.com/yytqetH.png />
+<img src=https://imgur.com/NGiGINA.png />
+</p>
+
 ## September
 
 ### 29
