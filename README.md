@@ -6,6 +6,17 @@ An art project just for fun.
 
 ## October
 
+### 14
+
+<p align="center">
+<img src=https://imgur.com/V0wlIBd.png />
+<img src=https://imgur.com/Pv57TRA.png />
+<img src=https://imgur.com/0SMZZ0C.png />
+<img src=https://imgur.com/vloe4EX.png />
+<img src=https://imgur.com/2hEoFqs.png />
+<img src=https://imgur.com/nk2dYnF.png />
+</p>
+
 ### 4
 
 <p align="center">
