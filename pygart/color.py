@@ -24,6 +24,7 @@ __all__ = [
         'to_rgb',
         'month_palette',
         'PaletteOrdered',
+        'ground_colors',
         ]
 
 
@@ -230,3 +231,28 @@ def to_rgb(h: int, s: float, v: float) -> tuple[int, int, int]:
 
     r, g, b = RGB()
     return int((r + m) * 255), int((g + m) * 255), int((b + m) * 255)
+
+def darkest(colors:list) -> int:
+    i = -1
+    x = None
+    for j, c in enumerate(colors):
+        if x is None or sum(c) < x:
+            x = sum(c)
+            i = j
+    return i
+
+def brightest(colors:list) -> int:
+    i = -1
+    x = None
+    for j, c in enumerate(colors):
+        if x is None or sum(c) > x:
+            x = sum(c)
+            i = j
+    return i
+
+def ground_colors(colors:list) -> tuple[tuple[int, int, int], list]:
+    """Split off the 'darkest' color from the rest of the color list. """
+    i = darkest(colors)
+    single = colors[i]
+    rest = colors[:i] + colors[i + 1:]
+    return single, rest
