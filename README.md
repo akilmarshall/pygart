@@ -4,6 +4,22 @@
 
 An art project just for fun.
 
+## Genuary
+
+[genuary.art](https://genuary.art/)
+
+### Perfect Loop 01
+
+current idea is to orbit the objects from august 12.
+
+How to build the frames, compile the webm, and view it in a loop.
+
+```bash
+$ python genuary/01.py
+$ ffmpeg -framerate 60 -i frames/%d.png out.webm 
+$ mpv --loop-file=inf out.webm
+```
+
 ## October
 
 ### 14
