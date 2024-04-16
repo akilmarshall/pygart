@@ -1,0 +1,284 @@
+[color]
+slate_color = [27, 54, 68]
+black = [0, 0, 0]
+white = [255, 255, 255]
+neutral_gray = [181, 209, 204]
+mineral_gray = [159, 194, 178]
+warm_gray = [156, 178, 158]
+taupe_brown = [107, 46, 99]
+violet_carmine = [83, 23, 69]
+violet = [38, 25, 209]
+red_violet = [52, 0, 163]
+cotinga_purple = [52, 0, 89]
+dusky_madder_violet = [45, 0, 96]
+dark_perilla_purple = [47, 10, 31]
+dull_purplish_black = [31, 31, 20]
+dull_blue_violet = [110, 102, 212]
+dark_soft_violet = [77, 82, 222]
+blue_violet = [71, 51, 255]
+violet_ultramarine = [38, 0, 255]
+purple_drab = [117, 66, 96]
+deep_violet = [92, 114, 135]
+plumbeous = [92, 114, 135]
+vernonia_purple = [126, 48, 117]
+dark_slate_purple = [83, 34, 92]
+grayish_lavender_1 = [184, 184, 255]
+grayish_lavender_2 = [191, 171, 204]
+laelia_pink = [204, 133, 209]
+lilac = [184, 117, 235]
+eupatorium_purple = [191, 54, 224]
+light_mauve = [145, 97, 242]
+aconite_violet = [156, 82, 242]
+deep_indigo = [0, 8, 49]
+deep_slate_green = [70, 38, 31]
+helvetia_blue = [0, 87, 186]
+dark_medici_blue = [65, 119, 119]
+dusky_green = [0, 89, 59]
+deep_lyons_blue = [0, 36, 204]
+violet_blue = [32, 45, 133]
+vandar_poels_blue = [0, 62, 131]
+dark_tyrian_blue = [13, 43, 82]
+dull_violet_black = [0, 13, 79]
+venice_green = [107, 255, 179]
+pale_methy_blue = [89, 224, 179]
+cerulean_blue = [41, 189, 173]
+peacock_blue = [0, 207, 145]
+green_blue = [45, 188, 148]
+olympic_blue = [79, 143, 230]
+blue = [13, 117, 255]
+antwarp_blue = [0, 138, 161]
+pale_kings_blue = [242, 252, 232]
+nile_blue = [191, 255, 230]
+nozoki_pale_kings_blue = [171, 245, 237]
+light_glaucous_blue = [166, 230, 219]
+salvia_blue = [150, 191, 230]
+cobalt_green = [148, 255, 148]
+calamine_blue = [128, 255, 204]
+blackish_olive = [50, 78, 42]
+deep_slate_olive = [23, 39, 19]
+light_porcelain_green = [35, 193, 124]
+green = [64, 201, 69]
+dull_viridian_green = [25, 204, 51]
+oil_green = [110, 169, 0]
+grape_green = [150, 191, 66]
+diamine_green = [30, 184, 0]
+cossack_green = [50, 142, 19]
+lincoln_green = [64, 84, 22]
+olive_yellow = [153, 179, 51]
+artemisia_green = [101, 169, 143]
+andover_green = [92, 138, 115]
+rainette_green = [106, 147, 70]
+chromium_green = [102, 171, 86]
+pistachio_green = [86, 170, 105]
+sea_green = [51, 255, 125]
+benzol_green = [0, 217, 115]
+turquoise_green = [181, 255, 194]
+glaucous_green = [179, 232, 194]
+dark_greenish_glaucous = [179, 217, 163]
+pale_turtle_green = [191, 230, 140]
+yellow_green = [166, 255, 71]
+light_green_yellow = [189, 242, 38]
+night_green = [122, 255, 0]
+sepia = [80, 61, 0]
+madder_brown = [101, 19, 0]
+mars_brown = [82, 32, 0]
+tobacco = [82, 32, 0]
+vandyke_brown = [54, 35, 4]
+kronbergs_green = [117, 146, 67]
+olive = [113, 134, 0]
+orange_citrine = [140, 101, 16]
+sudan_brown = [155, 83, 72]
+olive_green = [88, 119, 30]
+light_brownish_olive = [112, 105, 52]
+deep_grayish_olive = [80, 84, 35]
+pale_raw_umber = [94, 64, 23]
+sulphine_yellow = [186, 166, 0]
+khaki = [182, 132, 0]
+citron_yellow = [166, 212, 13]
+citrine = [152, 161, 0]
+dull_citrine = [122, 140, 56]
+buffy_citrine = [136, 141, 42]
+dark_citrine = [126, 135, 67]
+light_grayish_olive = [118, 132, 78]
+orange_yellow = [255, 171, 0]
+yellow_orange = [255, 140, 0]
+apricot_orange = [255, 115, 64]
+orange = [255, 82, 0]
+peach_red = [255, 51, 25]
+english_red = [222, 69, 0]
+cinnamon_rufous = [194, 97, 44]
+orange_rufous = [192, 82, 0]
+olive_buff = [188, 211, 130]
+ecru = [192, 180, 144]
+yellow = [255, 255, 0]
+lemon_yellow = [242, 255, 38]
+apricot_yellow = [255, 230, 0]
+pyrite_yellow = [196, 191, 51]
+olive_ocher = [209, 189, 25]
+yellow_ocher = [224, 184, 31]
+pinkish_cinnamon = [242, 173, 120]
+cinnamon_buff = [255, 191, 110]
+cream_yellow = [255, 184, 82]
+golden_yellow = [250, 148, 66]
+vinaceous_cinnamon = [245, 153, 148]
+ochraceous_salmon = [217, 158, 115]
+isabella_color = [195, 165, 92]
+maple = [194, 11, 90]
+sulphur_yellow = [245, 245, 184]
+sea_foam_yellow = [240, 240, 181]
+pale_lemon_yellow = [255, 245, 158]
+naples_yellow = [250, 237, 143]
+ivory_buff = [235, 217, 153]
+seashell_pink = [255, 207, 196]
+light_pinkish_cinnamon = [255, 191, 153]
+violet_red = [61, 0, 121]
+vistoris_lake = [92, 44, 69]
+carmine_red = [161, 11, 43]
+pompeian_red = [169, 6, 54]
+red = [161, 0, 69]
+brown = [108, 43, 17]
+hays_russet = [104, 25, 22]
+vandyke_red = [116, 9, 9]
+pansy_purple = [111, 0, 67]
+pale_burnt_lake = [115, 15, 31]
+ocher_red = [167, 55, 75]
+scarlet = [213, 12, 66]
+carmine = [214, 0, 54]
+indian_lake = [204, 26, 151]
+rosolanc_purple = [179, 25, 171]
+pomegranate_purple = [185, 0, 120]
+hydrangea_red = [158, 25, 77]
+brick_red = [163, 33, 0]
+eugenia_red = [230, 46, 115]
+raw_sienna = [184, 94, 0]
+vinaceous_tawny = [199, 67, 0]
+jasper_red = [250, 43, 0]
+spectrum_red = [242, 0, 0]
+red_orange = [232, 25, 0]
+etruscan_red = [201, 48, 62]
+burnt_sienna = [169, 52, 0]
+light_brown_drab = [176, 134, 153]
+coral_red = [255, 115, 153]
+fresh_color = [255, 120, 140]
+grenadine_pink = [255, 97, 107]
+eosine_pink = [255, 94, 196]
+spinel_red = [255, 77, 201]
+old_rose = [217, 77, 153]
+engenia_red = [237, 61, 102]
+pale_purplish_vinaceous = [255, 222, 235]
+hermosa_pink = [255, 179, 240]
+corinthian_pink = [255, 166, 217]
+cameo_pink = [230, 173, 207]
+pale_cinnamon_pink = [247, 224, 207]
+fawn = [209, 176, 179]
+pale_ecru_drab = [196, 191, 186]
+
+
+[palette]
+january = [
+            ["seashell_pink", "white", "sulphur_yellow", "glaucous_green", "grayish_lavender_2"],
+            ["citron_yellow", "light_pinkish_cinnamon", "naples_yellow", "pale_burnt_lake", "raw_sienna", "pinkish_cinnamon"],
+            ["vandyke_brown", "light_porcelain_green", "ecru", "dark_citrine", "deep_violet"],
+            ["burnt_sienna", "yellow_orange", "light_pinkish_cinnamon", "old_rose", "hermosa_pink", "red"],
+            ["black", "spectrum_red", "ivory_buff", "dark_tyrian_blue", "cobalt_green", "warm_gray"],
+            ["grayish_lavender_2", "apricot_yellow", "old_rose", "deep_violet", "violet_blue", "maple"],
+        ]
+          
+february = [
+            ["light_glaucous_blue", "red", "venice_green", "white", "citrine"],
+            ["lilac", "diamine_green", "sulphine_yellow", "dull_violet_black", "kronbergs_green"],
+            ["dull_citrine", "deep_indigo", "english_red", "khaki", "andover_green", "yellow_ocher"],
+            ["white", "engenia_red", "vistoris_lake", "mineral_gray", "maple"],
+            ["indian_lake", "fawn", "red", "spinel_red", "spectrum_red", "aconite_violet"],
+            ["deep_lyons_blue", "dull_blue_violet", "ivory_buff", "khaki", "neutral_gray"],
+        ]
+
+march = [
+            ["deep_indigo", "green", "pale_lemon_yellow", "peach_red", "nile_blue"],
+            ["seashell_pink", "carmine_red", "cameo_pink", "buffy_citrine", "pinkish_cinnamon", "nile_blue", "deep_slate_green"],
+            ["scarlet", "cotinga_purple", "sudan_brown", "olive_buff", "eupatorium_purple", "fresh_color"],
+            ["dark_soft_violet", "light_glaucous_blue", "cerulean_blue", "grayish_lavender_1", "helvetia_blue", "grayish_lavender_2", "deep_lyons_blue"],
+            ["light_glaucous_blue", "ocher_red", "dark_medici_blue", "vinaceous_cinnamon", "deep_indigo"],
+            ["olive_ocher", "vandar_poels_blue", "chromium_green", "eugenia_red", "golden_yellow", "light_brownish_olive"],
+        ]
+
+april = [
+            ["ivory_buff", "deep_lyons_blue", "grayish_lavender_1"],
+            ["yellow", "cobalt_green", "hermosa_pink", "calamine_blue", "turquoise_green"],
+            ["helvetia_blue", "dull_violet_black", "raw_sienna", "sulphur_yellow", "spinel_red"],
+            ["cobalt_green", "cinnamon_buff", "laelia_pink", "green"],
+            ["grayish_lavender_1", "citron_yellow", "pale_lemon_yellow", "light_glaucous_blue", "neutral_gray"],
+            ["eosine_pink", "engenia_red", "fawn", "olympic_blue", "olive_yellow"],
+        ]
+
+may = [
+            ["olympic_blue", "eosine_pink", "seashell_pink", "purple_drab"],
+            ["dusky_madder_violet", "sulphur_yellow", "pyrite_yellow", "cinnamon_buff"],
+            ["pansy_purple", "naples_yellow", "fawn", "corinthian_pink", "grenadine_pink"],
+            ["fawn", "vistoris_lake", "eosine_pink"],
+            ["citrine", "pyrite_yellow", "naples_yellow", "blackish_olive", "artemisia_green"],
+            ["cameo_pink", "english_red", "deep_slate_green", "artemisia_green", "blackish_olive", "orange_citrine"],
+    ]
+
+june = [
+            ["orange", "deep_slate_green", "artemisia_green", "nozoki_pale_kings_blue"],
+            ["dull_violet_black", "nozoki_pale_kings_blue"],
+            ["vinaceous_cinnamon", "lemon_yellow", "laelia_pink", "white", "olive_buff", "salvia_blue"],
+            ["vistoris_lake", "night_green", "seashell_pink", "vandyke_brown"],
+            ["dull_viridian_green", "pomegranate_purple", "fresh_color", "dark_perilla_purple", "light_brown_drab"],
+            ["pale_purplish_vinaceous", "calamine_blue", "deep_slate_green", "citron_yellow", "old_rose"],
+    ]
+
+july = [
+            ["helvetia_blue", "violet_blue", "neutral_gray"],
+            ["white", "eosine_pink", "spectrum_red", "deep_indigo"],
+            ["orange_rufous", "violet_blue", "blue_violet", "lilac", "grayish_lavender_2"],
+            ["grape_green", "sulphur_yellow", "sea_green"],
+            ["cobalt_green", "peacock_blue", "sepia", "white"],
+            ["cream_yellow", "orange", "oil_green", "lincoln_green"],
+    ]
+
+august = [
+            ["night_green", "pale_cinnamon_pink", "ivory_buff", "laelia_pink"],
+            ["vandar_poels_blue", "light_glaucous_blue", "sea_foam_yellow", "mineral_gray"],
+            ["rosolanc_purple", "dull_purplish_black", "cinnamon_buff", "peacock_blue"],
+            ["pale_ecru_drab", "pale_kings_blue", "grape_green", "pale_methy_blue", "violet_ultramarine"],
+            ["naples_yellow", "pale_methy_blue", "coral_red", "engenia_red", "dull_purplish_black"],
+            ["white", "vandar_poels_blue", "neutral_gray", "corinthian_pink"],
+    ]
+
+september = [
+            ["pale_ecru_drab", "cotinga_purple", "hermosa_pink", "hydrangea_red"],
+            ["olive_buff", "dull_citrine", "light_brownish_olive"],
+            ["blue", "dark_greenish_glaucous", "white", "dusky_green", "pistachio_green"],
+            ["sulphine_yellow", "dull_violet_black", "blue"],
+            ["dusky_green", "cossack_green", "spectrum_red", "yellow_green"],
+            ["buffy_citrine", "pale_lemon_yellow", "light_brown_drab", "light_glaucous_blue"],
+    ]
+
+october = [
+            ["green_blue", "sulphur_yellow", "dull_violet_black", "vandyke_red", "taupe_brown"],
+            ["ivory_buff", "fresh_color", "raw_sienna"],
+            ["deep_slate_olive", "red_orange", "light_brownish_olive", "orange_citrine"],
+            ["vistoris_lake", "light_glaucous_blue", "deep_indigo"],
+            ["glaucous_green", "light_pinkish_cinnamon", "mars_brown", "citron_yellow"],
+            ["apricot_orange", "seashell_pink", "ochraceous_salmon", "cinnamon_rufous", "fawn", "indian_lake"],
+    ]
+
+november = [
+            ["andover_green", "deep_indigo", "orange_rufous"],
+            ["cameo_pink", "lilac", "dusky_madder_violet", "grayish_lavender_1"],
+            ["slate_color", "glaucous_green", "pomegranate_purple", "sulphur_yellow", "nozoki_pale_kings_blue"],
+            ["red_orange", "black", "dark_medici_blue", "ivory_buff"],
+            ["dull_viridian_green", "lincoln_green", "etruscan_red"],
+            ["corinthian_pink", "spectrum_red", "pale_lemon_yellow", "pinkish_cinnamon", "yellow"],
+    ]
+
+december = [
+            ["orange_rufous", "yellow_ocher", "dull_violet_black", "artemisia_green"],
+            ["indian_lake", "vandar_poels_blue", "dark_greenish_glaucous", "sulphur_yellow", "olive_ocher"],
+            ["black", "jasper_red", "pale_kings_blue"],
+            ["sulphine_yellow", "cossack_green", "dull_violet_black", "pale_turtle_green"],
+            ["fawn", "sudan_brown", "slate_color", "nozoki_pale_kings_blue", "mineral_gray"],
+            ["salvia_blue", "pale_lemon_yellow", "sepia", "jasper_red", "neutral_gray"]
+    ]
