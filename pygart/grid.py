@@ -1,14 +1,12 @@
 from itertools import product
 
-# -> Generator[tuple[float, float]
 
-def Aligned(m, n, width, height, x_off=0, y_off=0, center=False):
+def Aligned(m: int, n: int, width: int, height: int, x_off:int=0, y_off:int=0):
     '''
-    Produce an aligned grid of (m, n) objects onto the (data.width, data.height) area
+    Produce an aligned grid of (m, n) objects onto the (width, height) area
     '''
     x_step = width / m
     y_step = height / n
-    x_gap = x_step * 
     for i, j in product(range(m), range(n)):
         x = i * x_step + x_off
         y = j * y_step + y_off
