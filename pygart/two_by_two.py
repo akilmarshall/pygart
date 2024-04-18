@@ -1,6 +1,7 @@
 from aggdraw import Draw, Pen, Brush
 from enum import Enum, auto
 from random import choice
+from abc import abstractmethod
 
 
 class Orientation(Enum):
@@ -18,9 +19,11 @@ def pick_orientation()-> Orientation:
     return choice(ORIENTATIONS)
 
 
-class Grid_Base_2:
-    def __init__(self, x, y, data):
+class Grid_Base:
+    def __init__(self, x, y, orienation: Orientation, data: dict, draw: Draw):
         self.data = data
+        self.draw = draw
+        self.orientation = orienation
         w = self.data['w']
         u = w / 2
         self.a = (x + 0, y + 0)
@@ -36,373 +39,288 @@ class Grid_Base_2:
         self.pen = Pen(data['out'], data['weight'])
         self.brush = Brush(data['fill'])
 
+        self.assemble()
+        self.write()
 
-class Grid_Base:
+        @abstractmethod
+        def assemble(self):
+            pass
 
-    def __init__(self, x, y, w):
-        u = w / 2  # w is a "double" u after all :)
-        self.w = w
-        self.u = u
-        self.a = (x + 0, y + 0)
-        self.b = (x + u, y + 0)
-        self.c = (x + w, y + 0)
-        self.d = (x + 0, y + u)
-        self.e = (x + u, y + u)
-        self.f = (x + w, y + u)
-        self.g = (x + 0, y + w)
-        self.h = (x + u, y + w)
-        self.i = (x + w, y + w)
+        @abstractmethod
+        def write(self):
+            pass
 
 
 class Half_Triangular_Prism(Grid_Base):
-    def __init__(self, orient: Orientation, *args, **kwargs):
+    def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-        self.orient = orient
-
-    def draw(self, draw: Draw, data: dict):
+    def assemble(self):
         s = self
-        pen = Pen(data['out'], data['weight'])
-        brush = Brush(data['fill'])
+        self.faces = {
+                Orientation.NORTH: {
+                        'top': (*s.b, *s.e, *s.g, *s.d),
+                        'front': (*s.e, *s.g, *s.h),
+                    }, 
+                Orientation.SOUTH: {
+                        'top': (*s.a, *s.e, *s.h, *s.d),
+                        'front': (*s.a, *s.b, *s.e),
+                    }, 
+                Orientation.EAST: {
+                        'top': (*s.a, *s.b, *s.f, *s.e),
+                        'front': (*s.a, *s.e, *s.d),
+                    }, 
+                Orientation.WEST: {
+                        'top': (*s.d, *s.e, *s.i, *s.h),
+                        'front': (*s.e, *s.f, *s.i),
+                    }, 
+                }
 
-        match s.orient:
-            case Orientation.NORTH:
-                # draw top
-                draw.polygon((*s.b, *s.e, *s.g, *s.d), pen, brush)
-                # draw front
-                draw.polygon((*s.e, *s.g, *s.h), pen, brush)
-            case Orientation.SOUTH:
-                # draw top
-                draw.polygon((*s.a, *s.e, *s.h, *s.d), pen, brush)
-                # draw front
-                draw.polygon((*s.a, *s.b, *s.e), pen, brush)
-            case Orientation.EAST:
-                # draw top
-                draw.polygon((*s.a, *s.b, *s.f, *s.e), pen, brush)
-                # draw front
-                draw.polygon((*s.a, *s.e, *s.d), pen, brush)
-            case Orientation.WEST:
-                # draw top
-                draw.polygon((*s.d, *s.e, *s.i, *s.h), pen, brush)
-                # draw front
-                draw.polygon((*s.e, *s.f, *s.i), pen, brush)
+    def write(self):
+        s = self
+        s.draw.polygon(s.faces[s.orientation]['top'], s.pen, s.brush)
+        s.draw.polygon(s.faces[s.orientation]['front'], s.pen, s.brush)
 
 
 class Half_Triangular_Prism_Mirror(Grid_Base):
-    def __init__(self, orient: Orientation, *args, **kwargs):
+    def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-        self.orient = orient
-
-    def draw(self, draw: Draw, data: dict):
+    def assemble(self):
         s = self
-        pen = Pen(data['out'], data['weight'])
-        brush = Brush(data['fill'])
+        self.faces = {
+                Orientation.NORTH: {
+                        'top': (*s.b, *s.f, *s.i, *s.e),
+                        'front': (*s.e, *s.h, *s.i),
+                    },
+                Orientation.SOUTH: {
+                        'top': (*s.e, *s.c, *s.f, *s.h),
+                        'front': (*s.b, *s.c, *s.e),
+                    },
+                Orientation.EAST: {
+                        'top': (*s.e, *s.f, *s.h, *s.g),
+                        'front': (*s.d, *s.e, *s.g),
+                    },
+                Orientation.WEST: {
+                        'top': (*s.b, *s.c, *s.e, *s.d),
+                        'front': (*s.c, *s.e, *s.f),
+                    },
+                }
 
-        match s.orient:
-            case Orientation.NORTH:
-                # draw top
-                draw.polygon((*s.b, *s.f, *s.i, *s.e), pen, brush)
-                # draw front
-                draw.polygon((*s.e, *s.h, *s.i), pen, brush)
-            case Orientation.SOUTH:
-                # draw top
-                draw.polygon((*s.e, *s.c, *s.f, *s.h), pen, brush)
-                # draw front
-                draw.polygon((*s.b, *s.c, *s.e), pen, brush)
-            case Orientation.EAST:
-                # draw top
-                draw.polygon((*s.e, *s.f, *s.h, *s.g), pen, brush)
-                # draw front
-                draw.polygon((*s.d, *s.e, *s.g), pen, brush)
-            case Orientation.WEST:
-                # draw top
-                draw.polygon((*s.b, *s.c, *s.e, *s.d), pen, brush)
-                # draw front
-                draw.polygon((*s.c, *s.e, *s.f), pen, brush)
+    def write(self):
+        s = self
+        s.draw.polygon(s.faces[s.orientation]['top'], s.pen, s.brush)
+        s.draw.polygon(s.faces[s.orientation]['front'], s.pen, s.brush)
 
 
 class Triangular_Prism(Grid_Base):
-    def __init__(self, orient: Orientation, *args, **kwargs):
+    def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-        self.orient = orient
-
-    def draw(self, draw: Draw, data: dict):
+    def assemble(self):
         s = self
-        pen = Pen(data['out'], data['weight'])
-        brush = Brush(data['fill'])
+        self.faces = {
+                Orientation.NORTH: {
+                        'front': (*s.e, *s.g, *s.i),
+                        'left': (*s.b, *s.d, *s.g, *s.e),
+                        'right': (*s.b, *s.f, *s.i, *s.e),
+                    },
+                Orientation.SOUTH: {
+                        'front': (*s.a, *s.e, *s.c),
+                        'left': (*s.a, *s.e, *s.h, *s.d),
+                        'right': (*s.c, *s.e, *s.h, *s.f),
+                    },
+                Orientation.EAST: {
+                        'front': (*s.a, *s.e, *s.g),
+                        'left': (*s.a, *s.b, *s.f, *s.e),
+                        'right': (*s.e, *s.f, *s.h, *s.g),
+                    },
+                Orientation.WEST: {
+                        'front': (*s.e, *s.c, *s.i),
+                        'left': (*s.d, *s.e, *s.i, *s.h),
+                        'right': (*s.d, *s.e, *s.c, *s.b),
+                    },
+                }
 
-        match s.orient:
-            case Orientation.NORTH:
-                # draw front
-                draw.polygon((*s.e, *s.g, *s.i), pen, brush)
-                # draw left
-                draw.polygon((*s.b, *s.d, *s.g, *s.e), pen, brush)
-                # draw right
-                draw.polygon((*s.b, *s.f, *s.i, *s.e), pen, brush)
-            case Orientation.SOUTH:
-                # draw front
-                draw.polygon((*s.a, *s.e, *s.c), pen, brush)
-                # draw left
-                draw.polygon((*s.a, *s.e, *s.h, *s.d), pen, brush)
-                # draw right
-                draw.polygon((*s.c, *s.e, *s.h, *s.f), pen, brush)
-            case Orientation.EAST:
-                # draw front
-                draw.polygon((*s.a, *s.e, *s.g), pen, brush)
-                # draw left
-                draw.polygon((*s.a, *s.b, *s.f, *s.e), pen, brush)
-                # draw right
-                draw.polygon((*s.e, *s.f, *s.h, *s.g), pen, brush)
-            case Orientation.WEST:
-                # draw front
-                draw.polygon((*s.e, *s.c, *s.i), pen, brush)
-                # draw left
-                draw.polygon((*s.d, *s.e, *s.i, *s.h), pen, brush)
-                # draw right
-                draw.polygon((*s.d, *s.e, *s.c, *s.b), pen, brush)
+    def write(self):
+        s = self
+        s.draw.polygon(s.faces[s.orientation]['front'], s.pen, s.brush)
+        s.draw.polygon(s.faces[s.orientation]['left'], s.pen, s.brush)
+        s.draw.polygon(s.faces[s.orientation]['right'], s.pen, s.brush)
 
 
 class Rectangular_Prism(Grid_Base):
-    def __init__(self, orient: Orientation, *args, **kwargs):
+    def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-        self.orient = orient
-
-    def draw(self, draw: Draw, data: dict):
+    def assemble(self):
         s = self
-        pen = Pen(data['out'], data['weight'])
-        brush = Brush(data['fill'])
+        self.faces = {
+                Orientation.NORTH: {
+                    'front': (*s.d, *s.e, *s.h, *s.g),
+                    'left': (*s.d, *s.e, *s.c, *s.b),
+                    'right': (*s.e, *s.h, *s.f, *s.c),
+                    },
+                Orientation.SOUTH: {
+                    'front': (*s.e, *s.f, *s.i, *s.h),
+                    'left': (*s.a, *s.e, *s.h, *s.d),
+                    'right': (*s.a, *s.b, *s.f, *s.e),
+                    },
+                Orientation.EAST: {
+                    'front': (*s.a, *s.b, *s.e, *s.d),
+                    'left': (*s.d, *s.e, *s.i, *s.h),
+                    'right': (*s.b, *s.f, *s.i, *s.e),
+                    },
+                Orientation.WEST: {
+                    'front': (*s.b, *s.c, *s.f, *s.e),
+                    'left': (*s.d, *s.b, *s.e, *s.g),
+                    'right': (*s.e, *s.f, *s.h, *s.g),
+                    },
+                }
 
-        match s.orient:
-            case Orientation.NORTH:
-                # draw front
-                draw.polygon((*s.d, *s.e, *s.h, *s.g), pen, brush)
-                # draw left
-                draw.polygon((*s.d, *s.e, *s.c, *s.b), pen, brush)
-                # draw right
-                draw.polygon((*s.e, *s.h, *s.f, *s.c), pen, brush)
-            case Orientation.SOUTH:
-                # draw front
-                draw.polygon((*s.e, *s.f, *s.i, *s.h), pen, brush)
-                # draw left
-                draw.polygon((*s.a, *s.e, *s.h, *s.d), pen, brush)
-                # draw right
-                draw.polygon((*s.a, *s.b, *s.f, *s.e), pen, brush)
-            case Orientation.EAST:
-                # draw front
-                draw.polygon((*s.a, *s.b, *s.e, *s.d), pen, brush)
-                # draw left
-                draw.polygon((*s.d, *s.e, *s.i, *s.h), pen, brush)
-                # draw right
-                draw.polygon((*s.b, *s.f, *s.i, *s.e), pen, brush)
-            case Orientation.WEST:
-                # draw front
-                draw.polygon((*s.b, *s.c, *s.f, *s.e), pen, brush)
-                # draw left
-                draw.polygon((*s.d, *s.b, *s.e, *s.g), pen, brush)
-                # draw right
-                draw.polygon((*s.e, *s.f, *s.h, *s.g), pen, brush)
+    def write(self):
+        s = self
+        s.draw.polygon(s.faces[s.orientation]['front'], s.pen, s.brush)
+        s.draw.polygon(s.faces[s.orientation]['left'], s.pen, s.brush)
+        s.draw.polygon(s.faces[s.orientation]['right'], s.pen, s.brush)
 
 
 class Triangular_Prism_2(Grid_Base):
-    def __init__(self, orient: Orientation, *args, **kwargs):
+    def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-        self.orient = orient
-
-    def draw(self, draw: Draw, data: dict):
+    def assemble(self):
         s = self
-        pen = Pen(data['out'], data['weight'])
-        brush = Brush(data['fill'])
+        self.faces = {
+                    Orientation.NORTH: {
+                        'front': (*s.d, *s.e, *s.h),
+                        'left': (*s.d, *s.e, *s.c, *s.b),
+                        'right': (*s.h, *s.e, *s.c, *s.f),
+                        },
+                    Orientation.SOUTH: {
+                        'front': (*s.h, *s.e, *s.f),
+                        'left': (*s.a, *s.d, *s.h, *s.e),
+                        'right': (*s.a, *s.b, *s.f, *s.e),
+                        },
+                    Orientation.EAST: {
+                        'front': (*s.d, *s.b, *s.e),
+                        'left': (*s.d, *s.e, *s.i, *s.h),
+                        'right': (*s.b, *s.f, *s.i, *s.e),
+                        },
+                    Orientation.WEST: {
+                        'front': (*s.b, *s.e, *s.f),
+                        'left': (*s.g, *s.d, *s.b, *s.e),
+                        'right': (*s.e, *s.f, *s.h, *s.g),
+                        },
+                }
 
-        match s.orient:
-            case Orientation.NORTH:
-                # draw front
-                draw.polygon((*s.d, *s.e, *s.h), pen, brush)
-                # draw left
-                draw.polygon((*s.d, *s.e, *s.c, *s.b), pen, brush)
-                # draw right
-                draw.polygon((*s.h, *s.e, *s.c, *s.f), pen, brush)
-            case Orientation.SOUTH:
-                # draw front
-                draw.polygon((*s.h, *s.e, *s.f), pen, brush)
-                # draw left
-                draw.polygon((*s.a, *s.d, *s.h, *s.e), pen, brush)
-                # draw right
-                draw.polygon((*s.a, *s.b, *s.f, *s.e), pen, brush)
-            case Orientation.EAST:
-                # draw front
-                draw.polygon((*s.d, *s.b, *s.e), pen, brush)
-                # draw left
-                draw.polygon((*s.d, *s.e, *s.i, *s.h), pen, brush)
-                # draw right
-                draw.polygon((*s.b, *s.f, *s.i, *s.e), pen, brush)
-            case Orientation.WEST:
-                # draw front
-                draw.polygon((*s.b, *s.e, *s.f), pen, brush)
-                # draw left
-                draw.polygon((*s.g, *s.d, *s.b, *s.e), pen, brush)
-                # draw right
-                draw.polygon((*s.e, *s.f, *s.h, *s.g), pen, brush)
+    def write(self):
+        s = self
+        s.draw.polygon(s.faces[s.orientation]['front'], s.pen, s.brush)
+        s.draw.polygon(s.faces[s.orientation]['left'], s.pen, s.brush)
+        s.draw.polygon(s.faces[s.orientation]['right'], s.pen, s.brush)
 
 
 class Tent(Grid_Base):
-    def __init__(self, orient: Orientation, *args, **kwargs):
+    def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-        self.orient = orient
 
-    def draw(self, draw: Draw, data: dict):
+    def assemble(self):
         s = self
-        pen = Pen(data['out'], data['weight'])
-        brush = Brush(data['fill'])
-
-        match s.orient:
-            case Orientation.NORTH:
-                # draw left
-                draw.polygon((*s.d, *s.e, *s.c, *s.b), pen, brush)
-                # draw right
-                draw.polygon((*s.h, *s.e, *s.c, *s.f), pen, brush)
-            case Orientation.SOUTH:
-                # draw left
-                draw.polygon((*s.a, *s.d, *s.h, *s.e), pen, brush)
-                # draw right
-                draw.polygon((*s.a, *s.b, *s.f, *s.e), pen, brush)
-            case Orientation.EAST:
-                # draw left
-                draw.polygon((*s.d, *s.e, *s.i, *s.h), pen, brush)
-                # draw right
-                draw.polygon((*s.b, *s.f, *s.i, *s.e), pen, brush)
-            case Orientation.WEST:
-                # draw left
-                draw.polygon((*s.g, *s.d, *s.b, *s.e), pen, brush)
-                # draw right
-                draw.polygon((*s.e, *s.f, *s.h, *s.g), pen, brush)
+        self.faces = {
+                Orientation.NORTH: {
+                    'left': (*s.d, *s.e, *s.c, *s.b),
+                    'right': (*s.h, *s.e, *s.c, *s.f),
+                    },
+                Orientation.SOUTH: {
+                    'left': (*s.a, *s.d, *s.h, *s.e),
+                    'right': (*s.a, *s.b, *s.f, *s.e),
+                    },
+                Orientation.EAST: {
+                    'left': (*s.d, *s.e, *s.i, *s.h),
+                    'right': (*s.b, *s.f, *s.i, *s.e),
+                    },
+                Orientation.WEST: {
+                    'left': (*s.g, *s.d, *s.b, *s.e),
+                    'right': (*s.e, *s.f, *s.h, *s.g),
+                    },
+                }
+    def write(self):
+        s = self
+        s.draw.polygon(s.faces[s.orientation]['left'], s.pen, s.brush)
+        s.draw.polygon(s.faces[s.orientation]['right'], s.pen, s.brush)
 
 
 class Staple(Grid_Base):
-    def __init__(self, orient: Orientation, *args, **kwargs):
+    def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-        self.orient = orient
 
-    def draw(self, draw: Draw, data: dict):
+    def assemble(self):
         s = self
-        pen = Pen(data['out'], data['weight'])
-        brush = Brush(data['fill'])
+        self.faces = {
+                Orientation.NORTH: {
+                    'left': (*s.d, *s.e, *s.c, *s.b),
+                    'right': (*s.h, *s.e, *s.c, *s.f),
+                    'inside': (*s.g, *s.e, *s.h),
+                    },
+                Orientation.SOUTH: {
+                    'left': (*s.a, *s.d, *s.h, *s.e),
+                    'right': (*s.a, *s.b, *s.f, *s.e),
+                    'inside': (*s.e, *s.h, *s.i),
+                    },
+                Orientation.EAST: {
+                    'left': (*s.d, *s.e, *s.i, *s.h),
+                    'right': (*s.b, *s.f, *s.i, *s.e),
+                    'inside': (*s.a, *s.e, *s.d),
+                    },
+                Orientation.WEST: {
+                    'left': (*s.g, *s.d, *s.b, *s.e),
+                    'right': (*s.e, *s.f, *s.h, *s.g),
+                    'inside': (*s.c, *s.e, *s.f),
+                    },
+                }
 
-        match s.orient:
-            case Orientation.NORTH:
-                # draw left
-                draw.polygon((*s.d, *s.e, *s.c, *s.b), pen, brush)
-                # draw right
-                draw.polygon((*s.h, *s.e, *s.c, *s.f), pen, brush)
-                # inside
-                draw.polygon((*s.g, *s.e, *s.h), pen, brush)
-            case Orientation.SOUTH:
-                # draw left
-                draw.polygon((*s.a, *s.d, *s.h, *s.e), pen, brush)
-                # draw right
-                draw.polygon((*s.a, *s.b, *s.f, *s.e), pen, brush)
-                # inside
-                draw.polygon((*s.e, *s.h, *s.i), pen, brush)
-            case Orientation.EAST:
-                # draw left
-                draw.polygon((*s.d, *s.e, *s.i, *s.h), pen, brush)
-                # draw right
-                draw.polygon((*s.b, *s.f, *s.i, *s.e), pen, brush)
-                # inside
-                draw.polygon((*s.a, *s.e, *s.d), pen, brush)
-            case Orientation.WEST:
-                # draw left
-                draw.polygon((*s.g, *s.d, *s.b, *s.e), pen, brush)
-                # draw right
-                draw.polygon((*s.e, *s.f, *s.h, *s.g), pen, brush)
-                # inside
-                draw.polygon((*s.c, *s.e, *s.f), pen, brush)
+    def write(self):
+        s = self
+        s.draw.polygon(s.faces[s.orientation]['left'], s.pen, s.brush)
+        s.draw.polygon(s.faces[s.orientation]['right'], s.pen, s.brush)
+        s.draw.polygon(s.faces[s.orientation]['inside'], s.pen, s.brush)
 
 
 class Staple_2(Grid_Base):
-    def __init__(self, orient: Orientation, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-
-        self.orient = orient
-
-    def draw(self, draw: Draw, data: dict):
-        s = self
-        pen = Pen(data['out'], data['weight'])
-        brush = Brush(data['fill'])
-
-        match s.orient:
-            case Orientation.NORTH:
-                # draw left
-                draw.polygon((*s.d, *s.e, *s.c, *s.b), pen, brush)
-                # draw right
-                draw.polygon((*s.h, *s.e, *s.c, *s.f), pen, brush)
-                # inside
-                draw.polygon((*s.g, *s.e, *s.d), pen, brush)
-            case Orientation.SOUTH:
-                # draw left
-                draw.polygon((*s.a, *s.d, *s.h, *s.e), pen, brush)
-                # draw right
-                draw.polygon((*s.a, *s.b, *s.f, *s.e), pen, brush)
-                # inside
-                draw.polygon((*s.e, *s.f, *s.i), pen, brush)
-            case Orientation.EAST:
-                # draw left
-                draw.polygon((*s.d, *s.e, *s.i, *s.h), pen, brush)
-                # draw right
-                draw.polygon((*s.b, *s.f, *s.i, *s.e), pen, brush)
-                # inside
-                draw.polygon((*s.a, *s.e, *s.b), pen, brush)
-            case Orientation.WEST:
-                # draw left
-                draw.polygon((*s.g, *s.d, *s.b, *s.e), pen, brush)
-                # draw right
-                draw.polygon((*s.e, *s.f, *s.h, *s.g), pen, brush)
-                # inside
-                draw.polygon((*s.c, *s.e, *s.b), pen, brush)
-
-
-class Staple_3(Grid_Base_2):
     '''for testing'''
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-    def assemble(self, draw, left: tuple, right:tuple, inside:tuple):
-        # draw left
-        draw.polygon(left, self.pen, self.brush)
-        # draw right
-        draw.polygon(right, self.pen, self.brush)
-        # inside
-        draw.polygon(inside, self.pen, self.brush)
-
-    def draw(self, orientation: Orientation, draw: Draw):
+    def assemble(self):
         s = self
-        match orientation:
-            case Orientation.NORTH:
-                self.assemble(
-                        draw,
-                        (*s.d, *s.e, *s.c, *s.b),
-                        (*s.h, *s.e, *s.c, *s.f),
-                        (*s.g, *s.e, *s.d))
-            case Orientation.SOUTH:
-                self.assemble(
-                        draw,
-                        (*s.a, *s.d, *s.h, *s.e),
-                        (*s.a, *s.b, *s.f, *s.e),
-                        (*s.e, *s.f, *s.i))
-            case Orientation.EAST:
-                self.assemble(
-                        draw,
-                        (*s.d, *s.e, *s.i, *s.h),
-                        (*s.b, *s.f, *s.i, *s.e),
-                        (*s.a, *s.e, *s.b))
-            case Orientation.WEST:
-                self.assemble(
-                        draw,
-                        (*s.g, *s.d, *s.b, *s.e),
-                        (*s.e, *s.f, *s.h, *s.g),
-                        (*s.c, *s.e, *s.b))
+        self.faces = {
+                Orientation.NORTH: {
+                    'left': (*s.d, *s.e, *s.c, *s.b),
+                    'right': (*s.h, *s.e, *s.c, *s.f),
+                    'inside': (*s.g, *s.e, *s.d),
+                    },
+                Orientation.EAST: {
+                    'left': (*s.d, *s.e, *s.i, *s.h),
+                    'right': (*s.b, *s.f, *s.i, *s.e),
+                    'inside': (*s.a, *s.e, *s.b),
+                    },
+                Orientation.WEST: {
+                    'left': (*s.g, *s.d, *s.b, *s.e),
+                    'right': (*s.e, *s.f, *s.h, *s.g),
+                    'inside': (*s.c, *s.e, *s.b),
+                    },
+                Orientation.SOUTH: {
+                    'left': (*s.a, *s.d, *s.h, *s.e),
+                    'right': (*s.a, *s.b, *s.f, *s.e),
+                    'inside': (*s.e, *s.f, *s.i),
+                    },
+                }
+
+    def write(self):
+        s = self
+        s.draw.polygon(s.faces[s.orientation]['left'], s.pen, s.brush)
+        s.draw.polygon(s.faces[s.orientation]['right'], s.pen, s.brush)
+        s.draw.polygon(s.faces[s.orientation]['inside'], s.pen, s.brush)
