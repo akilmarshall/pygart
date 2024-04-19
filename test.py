@@ -3,7 +3,7 @@ from random import shuffle
 from pathlib import Path
 
 from pygart import taisho_palette, current_month, make_canvas
-from pygart.two_by_two import Orientation, \
+from pygart.two_by_two import ORIENTATIONS, \
     Rectangular_Prism, Triangular_Prism, \
     Half_Triangular_Prism, Half_Triangular_Prism_Mirror, \
     Triangular_Prism_2, Tent, \
@@ -27,7 +27,7 @@ example_dir = Path('example')
 if not example_dir.exists():
     example_dir.mkdir()
 
-
+XY = [(1/4, 1/4), (1/2, 1/4), (1/4, 1/2), (1/2, 1/2)]
 for palette, obj in zip(cycle(palettes), objs):
     shuffle(palette)
     data = {
@@ -41,14 +41,10 @@ for palette, obj in zip(cycle(palettes), objs):
         }
     img, draw = make_canvas(data)
 
-    obj(Orientation.NORTH, data['width'] / 4, data['height'] / 4, data['w']) \
-        .draw(draw, data)
-    obj(Orientation.SOUTH, data['width'] / 2, data['height'] / 4, data['w']) \
-        .draw(draw, data)
-    obj(Orientation.EAST, data['width'] / 4, data['height'] / 2, data['w']) \
-        .draw(draw, data)
-    obj(Orientation.WEST, data['width'] / 2, data['height'] / 2, data['w']) \
-        .draw(draw, data)
+    for (orientation, (x, y)) in zip(ORIENTATIONS, XY):
+            obj(data['width'] * x, data['height'] * y, orientation, data, draw)
 
     draw.flush()
-    img.save(example_dir / f'{obj.__name__.lower()}.png')
+    output_path = example_dir / f'{obj.__name__.lower()}.png'
+    img.save(output_path)
+    print(f'wrote out: {output_path}')
