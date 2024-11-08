@@ -10,5 +10,5 @@ def Aligned(m: int, n: int, width: int, height: int, x_off:int=0, y_off:int=0):
     for i, j in product(range(m), range(n)):
         x = i * x_step + x_off
         y = j * y_step + y_off
-        yield x, y
+        yield x, y, i, j
 
