@@ -26,6 +26,13 @@ def make_canvas(data: dict) -> tuple[Image.Image, Draw]:
     return img, Draw(img)
 
 
+def make_gif(fname: str|Path, frames: list[Image.Image], duration=500, loop=None):
+    if loop: 
+        frames[0].save(fname, save_all=True, append_images=frames[1:], duration=duration, loop=loop)
+    else:
+        frames[0].save(fname, save_all=True, append_images=frames[1:], duration=duration)
+
+
 def current_month():
     # Get the current month as an integer
     current_month = datetime.datetime.now().month
@@ -72,3 +79,8 @@ def solarized_colors(selection: Color_Type, string=False):
             return _map(0, 4)
         case Color_Type.COLOR:
             return _map(8, 16)
+
+def parity(x, y):
+    if x % 2:
+        return 0 if y % 2 else 1
+    return 1 if y % 2 else 0
